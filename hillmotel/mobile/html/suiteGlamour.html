@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VL3HNPB829"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-VL3HNPB829');
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>Suíte Glamour</title>
+</head>
+<body class="glamour">
+    <picture style="--src: url(../midias/jpg/galeria/glamour/8.jpg); --imgPosition: center;">
+        <h2>Suíte Glamour</h2>
+    </picture>
+    <div class="valores">
+        <h3>Valores e períodos:</h3>
+        <ul>
+            <li>• 02 horas = R$ 132,00</li>
+            <li>• 04 horas = R$ 204,00</li>
+            <li>• 06 horas = R$ 277,00</li>
+            <li>• 08 horas = R$ 350,00</li>
+            <li>• 12 horas = R$ 422,00</li>
+        </ul>
+    </div>
+    <div class="descricao">
+        <h3>Descrição:</h3>
+        <p> A Suíte Glamour é uma suíte que disponibiliza TV 32", som, ar condicionado, frigobar e banheira de hidromassagem casal. Também possui espelho no teto, visão da hidromassagem mesmo estando na cama, uma bela decoração e garagem privativa.</p>
+    </div>
+    <div class="galeria" style="--columns: repeat(4, 24%);">
+        <h3>Galeria de fotos:</h3>
+        <div>
+            <img class="fotos" onclick="openFoto(0, 15)" src="../midias/jpg/galeria/glamour/1.jpg" alt="Suíte Glamour">
+            <img class="fotos" onclick="openFoto(1, 15)" src="../midias/jpg/galeria/glamour/2.jpg" alt="Suíte Glamour">
+            <img class="fotos" onclick="openFoto(2, 15)" src="../midias/jpg/galeria/glamour/3.jpg" alt="Suíte Glamour">
+            <img class="fotos" onclick="openFoto(3, 15)" src="../midias/jpg/galeria/glamour/4.jpg" alt="Suíte Glamour">
+            <img class="fotos" onclick="openFoto(4, 15)" src="../midias/jpg/galeria/glamour/5.jpg" alt="Suíte Glamour">
+            <img class="fotos" onclick="openFoto(5, 15)" src="../midias/jpg/galeria/glamour/6.jpg" alt="Suíte Glamour">
+            <img class="fotos" onclick="openFoto(6, 15)" src="../midias/jpg/galeria/glamour/7.jpg" alt="Suíte Glamour">
+            <img class="fotos" onclick="openFoto(7, 15)" src="../midias/jpg/galeria/glamour/8.jpg" alt="Suíte Glamour">
+            <img class="fotos" onclick="openFoto(8, 15)" src="../midias/jpg/galeria/glamour/9.jpg" alt="Suíte Glamour">
+            <img class="fotos" onclick="openFoto(9, 15)" src="../midias/jpg/galeria/glamour/10.jpg" alt="Suíte Glamour">
+            <img class="fotos" onclick="openFoto(10, 15)" src="../midias/jpg/galeria/glamour/11.jpg" alt="Suíte Glamour">
+            <img class="fotos" onclick="openFoto(11, 15)" src="../midias/jpg/galeria/glamour/12.jpg" alt="Suíte Glamour">
+            <img class="fotos" onclick="openFoto(12, 15)" src="../midias/jpg/galeria/glamour/13.jpg" alt="Suíte Glamour">
+            <img class="fotos" onclick="openFoto(13, 15)" src="../midias/jpg/galeria/glamour/14.jpg" alt="Suíte Glamour">
+            <img class="fotos" onclick="openFoto(14, 15)" src="../midias/jpg/galeria/glamour/15.jpg" alt="Suíte Glamour">
+            <img class="fotos" onclick="openFoto(15, 15)" src="../midias/jpg/galeria/glamour/16.jpg" alt="Suíte Glamour">
+        </div>
+    </div>
+    <div id="viewFull" style="display: none;">
+        <p class="alert">Fotos meramente ilustrativas! As suítes possuem características distintas e passam por mudanças na decoração e reformas constantemente, o que pode causar variações nos itens, acessórios, móveis e etc...</p>
+        <img id="image" src="" alt="">
+        <button id="prev" onclick="prev()"><i class='bx bx-chevrons-left' ></i></button>
+        <button id="next" onclick="next()"><i class='bx bx-chevrons-left bx-rotate-180' ></i></button>
+        <button id="close" onclick="close_()"><i class='bx bx-x'></i></button>
+    </div>
+</body>
+<script src="../script/script.js"></script>
+</html>

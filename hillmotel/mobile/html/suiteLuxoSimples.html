@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VL3HNPB829"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-VL3HNPB829');
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>Suíte Simples</title>
+</head>
+<body class="luxoSimples">
+    <picture style="--src: url(../midias/jpg/galeria/luxoSimples/1.jpg); --imgPosition: bottom;">
+        <h2>Suíte Luxo Simples</h2>
+    </picture>
+    <div class="valores">
+        <h3>Valores e períodos:</h3>
+        <ul>
+            <li>• 02 horas = R$ 91,00</li>
+            <li>• 04 horas = R$ 128,00</li>
+            <li>• 06 horas = R$ 165,00</li>
+            <li>• 08 horas = R$ 201,00</li>
+            <li>• 12 horas = R$ 238,00</li>
+        </ul>
+    </div>
+    <div class="descricao">
+        <h3>Descrição:</h3>
+        <p> A Suíte Luxo Simples é uma suíte que disponibiliza TV 32", som, ar condicionado, frigobar e garagem privativa.</p>
+    </div>
+    <div class="galeria" style="--columns: repeat(4, 24%);">
+        <h3>Galeria de fotos:</h3>
+        <div>
+            <img class="fotos" onclick="openFoto(0, 3)" src="../midias/jpg/galeria/luxoSimples/1.jpg" alt="Suíte Luxo Simples">
+            <img class="fotos" onclick="openFoto(1, 3)" src="../midias/jpg/galeria/luxoSimples/2.jpg" alt="Suíte Luxo Simples">
+            <img class="fotos" onclick="openFoto(2, 3)" src="../midias/jpg/galeria/luxoSimples/3.jpg" alt="Suíte Luxo Simples">
+            <img class="fotos" onclick="openFoto(3, 3)" src="../midias/jpg/galeria/luxoSimples/4.jpg" alt="Suíte Luxo Simples">
+        </div>
+    </div>
+    <div id="viewFull" style="display: none;">
+        <p class="alert">Fotos meramente ilustrativas! As suítes possuem características distintas e passam por mudanças na decoração e reformas constantemente, o que pode causar variações nos itens, acessórios, móveis e etc...</p>
+        <img id="image" src="" alt="">
+        <button id="prev" onclick="prev()"><i class='bx bx-chevrons-left' ></i></button>
+        <button id="next" onclick="next()"><i class='bx bx-chevrons-left bx-rotate-180' ></i></button>
+        <button id="close" onclick="close_()"><i class='bx bx-x'></i></button>
+    </div>
+</body>
+<script src="../script/script.js"></script>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VL3HNPB829"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-VL3HNPB829');
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>Suíte Presidencial Romana</title>
+</head>
+<body class="presRom">
+    <picture style="--src: url(../midias/jpg/galeria/presRom/16.jpg); --imgPosition: center;">
+        <h2>Suíte Pres. Romana</h2>
+    </picture>
+    <div class="valores">
+        <h3>Valores e períodos:</h3>
+        <ul>
+            <li>• 02 horas = R$ 250,00</li>
+            <li>• 04 horas = R$ 375,00</li>
+            <li>• 06 horas = R$ 500,00</li>
+            <li>• 08 horas = R$ 624,00</li>
+            <li>• 12 horas = R$ 749,00</li>
+        </ul>
+    </div>
+    <div class="descricao">
+        <h3>Descrição:</h3>
+        <p> A Suíte Presidencial Romana é uma suíte com decoração temática e que disponibiliza TV 32", som individual*, ar condicionado, piscina, frigobar (no quarto e na piscina), banheira de hidromassagem grande (redonda) e cama redonda. Essa suíte também possui espelho no teto, espelhos ao redor da suíte, poltrona erótica, cadeira do sultão, sauna a vapor, jogo de luzes coloridas e garagem privativa. *Verificar disponibilidade dos itens!</p>
+    </div>
+    <div class="galeria" style="--columns: repeat(4, 24%);">
+        <h3>Galeria de fotos:</h3>
+        <div>
+            <img class="fotos" onclick="openFoto(0, 19)" src="../midias/jpg/galeria/presRom/1.jpg" alt="Suíte Presidencial Romana">
+            <img class="fotos" onclick="openFoto(1, 19)" src="../midias/jpg/galeria/presRom/2.jpg" alt="Suíte Presidencial Romana">
+            <img class="fotos" onclick="openFoto(2, 19)" src="../midias/jpg/galeria/presRom/3.jpg" alt="Suíte Presidencial Romana">
+            <img class="fotos" onclick="openFoto(3, 19)" src="../midias/jpg/galeria/presRom/4.jpg" alt="Suíte Presidencial Romana">
+            <img class="fotos" onclick="openFoto(4, 19)" src="../midias/jpg/galeria/presRom/5.jpg" alt="Suíte Presidencial Romana">
+            <img class="fotos" onclick="openFoto(5, 19)" src="../midias/jpg/galeria/presRom/6.jpg" alt="Suíte Presidencial Romana">
+            <img class="fotos" onclick="openFoto(6, 19)" src="../midias/jpg/galeria/presRom/7.jpg" alt="Suíte Presidencial Romana">
+            <img class="fotos" onclick="openFoto(7, 19)" src="../midias/jpg/galeria/presRom/8.jpg" alt="Suíte Presidencial Romana">
+            <img class="fotos" onclick="openFoto(8, 19)" src="../midias/jpg/galeria/presRom/9.jpg" alt="Suíte Presidencial Romana">
+            <img class="fotos" onclick="openFoto(9, 19)" src="../midias/jpg/galeria/presRom/10.jpg" alt="Suíte Presidencial Romana">
+            <img class="fotos" onclick="openFoto(10, 19)" src="../midias/jpg/galeria/presRom/11.jpg" alt="Suíte Presidencial Romana">
+            <img class="fotos" onclick="openFoto(11, 19)" src="../midias/jpg/galeria/presRom/12.jpg" alt="Suíte Presidencial Romana">
+            <img class="fotos" onclick="openFoto(12, 19)" src="../midias/jpg/galeria/presRom/13.jpg" alt="Suíte Presidencial Romana">
+            <img class="fotos" onclick="openFoto(13, 19)" src="../midias/jpg/galeria/presRom/14.jpg" alt="Suíte Presidencial Romana">
+            <img class="fotos" onclick="openFoto(14, 19)" src="../midias/jpg/galeria/presRom/15.jpg" alt="Suíte Presidencial Romana">
+            <img class="fotos" onclick="openFoto(15, 19)" src="../midias/jpg/galeria/presRom/16.jpg" alt="Suíte Presidencial Romana">
+            <img class="fotos" onclick="openFoto(16, 19)" src="../midias/jpg/galeria/presRom/17.jpg" alt="Suíte Presidencial Romana">
+            <img class="fotos" onclick="openFoto(17, 19)" src="../midias/jpg/galeria/presRom/18.jpg" alt="Suíte Presidencial Romana">
+            <img class="fotos" onclick="openFoto(18, 19)" src="../midias/jpg/galeria/presRom/19.jpg" alt="Suíte Presidencial Romana">
+            <img class="fotos" onclick="openFoto(19, 19)" src="../midias/jpg/galeria/presRom/20.jpg" alt="Suíte Presidencial Romana">
+        </div>
+    </div>
+    <div id="viewFull" style="display: none;">
+        <p class="alert">Fotos meramente ilustrativas! As suítes possuem características distintas e passam por mudanças na decoração e reformas constantemente, o que pode causar variações nos itens, acessórios, móveis e etc...</p>
+        <img id="image" src="" alt="">
+        <button id="prev" onclick="prev()"><i class='bx bx-chevrons-left' ></i></button>
+        <button id="next" onclick="next()"><i class='bx bx-chevrons-left bx-rotate-180' ></i></button>
+        <button id="close" onclick="close_()"><i class='bx bx-x'></i></button>
+    </div>
+</body>
+<script src="../script/script.js"></script>
+</html>

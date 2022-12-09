@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VL3HNPB829"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-VL3HNPB829');
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>Suíte Presidencial Plus</title>
+</head>
+<body class="presPlus">
+    <picture style="--src: url(../midias/jpg/galeria/presPlus/4.jpg); --imgPosition: center;">
+        <h2>Suíte Pres. Plus</h2>
+    </picture>
+    <div class="valores">
+        <h3>Valores e períodos:</h3>
+        <ul>
+            <li>• 02 horas = R$ 288,00</li>
+            <li>• 04 horas = R$ 431,00</li>
+            <li>• 06 horas = R$ 575,00</li>
+            <li>• 08 horas = R$ 719,00</li>
+            <li>• 12 horas = R$ 863,00</li>
+        </ul>
+    </div>
+    <div class="descricao">
+        <h3>Descrição:</h3>
+        <p> A Suíte Presidencial Plus é uma suíte que disponibiliza TV 32", som individual, piscina, frigobar (no quarto e na piscina), ar condicionado, espelho no teto, espelhos ao redor da suíte, pole dance, sauna a vapor, cama redonda, jogo de luzes coloridas, banheira de hidromassagem grande (redonda) e garagem privativa. *Verificar disponibilidade dos itens!</p>
+    </div>
+    <div class="galeria" style="--columns: repeat(4, 24%);">
+        <h3>Galeria de fotos:</h3>
+        <div>
+            <img class="fotos" onclick="openFoto(0, 23)" src="../midias/jpg/galeria/presPlus/1.jpg" alt="Suíte Presidencial Plus">
+            <img class="fotos" onclick="openFoto(1, 23)" src="../midias/jpg/galeria/presPlus/2.jpg" alt="Suíte Presidencial Plus">
+            <img class="fotos" onclick="openFoto(2, 23)" src="../midias/jpg/galeria/presPlus/3.jpg" alt="Suíte Presidencial Plus">
+            <img class="fotos" onclick="openFoto(3, 23)" src="../midias/jpg/galeria/presPlus/4.jpg" alt="Suíte Presidencial Plus">
+            <img class="fotos" onclick="openFoto(4, 23)" src="../midias/jpg/galeria/presPlus/5.jpg" alt="Suíte Presidencial Plus">
+            <img class="fotos" onclick="openFoto(5, 23)" src="../midias/jpg/galeria/presPlus/6.jpg" alt="Suíte Presidencial Plus">
+            <img class="fotos" onclick="openFoto(6, 23)" src="../midias/jpg/galeria/presPlus/7.jpg" alt="Suíte Presidencial Plus">
+            <img class="fotos" onclick="openFoto(7, 23)" src="../midias/jpg/galeria/presPlus/8.jpg" alt="Suíte Presidencial Plus">
+            <img class="fotos" onclick="openFoto(8, 23)" src="../midias/jpg/galeria/presPlus/9.jpg" alt="Suíte Presidencial Plus">
+            <img class="fotos" onclick="openFoto(9, 23)" src="../midias/jpg/galeria/presPlus/10.jpg" alt="Suíte Presidencial Plus">
+            <img class="fotos" onclick="openFoto(10, 23)" src="../midias/jpg/galeria/presPlus/11.jpg" alt="Suíte Presidencial Plus">
+            <img class="fotos" onclick="openFoto(11, 23)" src="../midias/jpg/galeria/presPlus/12.jpg" alt="Suíte Presidencial Plus">
+            <img class="fotos" onclick="openFoto(12, 23)" src="../midias/jpg/galeria/presPlus/13.jpg" alt="Suíte Presidencial Plus">
+            <img class="fotos" onclick="openFoto(13, 23)" src="../midias/jpg/galeria/presPlus/14.jpg" alt="Suíte Presidencial Plus">
+            <img class="fotos" onclick="openFoto(14, 23)" src="../midias/jpg/galeria/presPlus/15.jpg" alt="Suíte Presidencial Plus">
+            <img class="fotos" onclick="openFoto(15, 23)" src="../midias/jpg/galeria/presPlus/16.jpg" alt="Suíte Presidencial Plus">
+            <img class="fotos" onclick="openFoto(16, 23)" src="../midias/jpg/galeria/presPlus/17.jpg" alt="Suíte Presidencial Plus">
+            <img class="fotos" onclick="openFoto(17, 23)" src="../midias/jpg/galeria/presPlus/18.jpg" alt="Suíte Presidencial Plus">
+            <img class="fotos" onclick="openFoto(18, 23)" src="../midias/jpg/galeria/presPlus/19.jpg" alt="Suíte Presidencial Plus">
+            <img class="fotos" onclick="openFoto(19, 23)" src="../midias/jpg/galeria/presPlus/20.jpg" alt="Suíte Presidencial Plus">
+            <img class="fotos" onclick="openFoto(20, 23)" src="../midias/jpg/galeria/presPlus/21.jpg" alt="Suíte Presidencial Plus">
+            <img class="fotos" onclick="openFoto(21, 23)" src="../midias/jpg/galeria/presPlus/22.jpg" alt="Suíte Presidencial Plus">
+            <img class="fotos" onclick="openFoto(22, 23)" src="../midias/jpg/galeria/presPlus/23.jpg" alt="Suíte Presidencial Plus">
+            <img class="fotos" onclick="openFoto(23, 23)" src="../midias/jpg/galeria/presPlus/24.jpg" alt="Suíte Presidencial Plus">
+        </div>
+    </div>
+    <div id="viewFull" style="display: none;">
+        <p class="alert">Fotos meramente ilustrativas! As suítes possuem características distintas e passam por mudanças na decoração e reformas constantemente, o que pode causar variações nos itens, acessórios, móveis e etc...</p>
+        <img id="image" src="" alt="">
+        <button id="prev" onclick="prev()"><i class='bx bx-chevrons-left' ></i></button>
+        <button id="next" onclick="next()"><i class='bx bx-chevrons-left bx-rotate-180' ></i></button>
+        <button id="close" onclick="close_()"><i class='bx bx-x'></i></button>
+    </div>
+</body>
+<script src="../script/script.js"></script>
+</html>

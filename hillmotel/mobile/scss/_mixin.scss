@@ -1,0 +1,13 @@
+@mixin resetList($a,$b) {
+    padding: 0px;    
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: $a;
+    font-size: $b;
+}
+@mixin insertAfter() {
+    content: '';
+    display: block;
+    width: 100vw;
+    height: 61px;
+}

@@ -1,0 +1,513 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Redressed&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+@media screen and (min-width: 601px) {
+  .mobile {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  .desktop {
+    display: none;
+  }
+  .myIframe {
+    width: 100vw;
+    height: calc(100vh - 59px - 52px);
+    margin-bottom: 55px;
+    margin-top: 52px;
+  }
+  .mobile_cabecalho {
+    width: 100vw;
+    position: relative;
+  }
+  .mobile_cabecalho h1 {
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    font-family: lobster;
+    text-align: center;
+    background-color: #c1c1c1;
+    font-weight: normal;
+    padding: 6px 0px;
+  }
+  .mobile_cabecalho .menu {
+    position: fixed;
+    bottom: 0px;
+    width: 100vw;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 6px 0px;
+    background-color: #c1c1c1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 1;
+  }
+  .mobile_cabecalho .menu li {
+    text-align: center;
+    width: 25%;
+    position: relative;
+    height: 47px;
+    transition: 0.2s linear;
+    bottom: 0px;
+  }
+  .mobile_cabecalho .menu li div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  .mobile_cabecalho .menu li div i {
+    font-size: 26px;
+  }
+  .mobile_cabecalho .menu li div p {
+    font-family: redressed;
+  }
+  .mobile_cabecalho .seletor {
+    width: 25vw;
+    height: 59px;
+    position: fixed;
+    bottom: 20px;
+    left: 0%;
+    transition: 0.2s linear;
+  }
+  .mobile_cabecalho .seletor::before {
+    content: "";
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    background-color: #c1c1c1;
+    border: 2px solid blue;
+  }
+  .mobile_cabecalho .seletor::after {
+    content: "";
+    display: block;
+    position: fixed;
+    bottom: 59px;
+    margin: auto;
+    width: 100vw;
+    height: 2px;
+    background-color: blue;
+    z-index: -1;
+    left: 0px !important;
+  }
+  .mobile_inicio {
+    background-color: #000e40;
+  }
+  .mobile_inicio .destaques {
+    position: relative;
+    height: 180px;
+    width: 100%;
+  }
+  .mobile_inicio .destaques img {
+    position: absolute;
+    width: 100%;
+    height: 180px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .mobile_inicio .destaques .visible {
+    transition: opacity 3s linear;
+    opacity: 1;
+  }
+  .mobile_inicio .destaques .invisible {
+    transition: opacity 2s linear;
+    opacity: 0;
+  }
+  .mobile_inicio .destaques ul {
+    width: 100%;
+    height: 6px;
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+  }
+  .mobile_inicio .destaques ul li {
+    width: 20px;
+    height: 100%;
+    background-color: white;
+    border-radius: 3px;
+    margin: 0px 2px;
+    overflow: hidden;
+  }
+  .mobile_inicio .destaques ul li div {
+    width: 0%;
+    height: 100%;
+    background-color: black;
+  }
+  .mobile_inicio .destaques ul li .loading_complete {
+    transition: width 3s linear;
+    width: 100%;
+  }
+  .mobile_inicio .mobile_welcome {
+    background-color: #000e40;
+    width: 100vw;
+    height: auto;
+  }
+  .mobile_inicio .mobile_welcome h2 {
+    color: #c1c1c1;
+    font-family: oswald;
+    text-align: center;
+    padding: 20px 0px;
+  }
+  .mobile_inicio .mobile_welcome p {
+    background-color: white;
+    color: #000e40;
+    font-family: oswald;
+    margin: 0px 30px;
+    border-radius: 20px;
+    padding: 10px 20px;
+    -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+    text-align: justify;
+    box-shadow: 0px 0px 8px 8px white;
+  }
+  .mobile_inicio .mobile_welcome::after {
+    content: "";
+    width: 100%;
+    height: 30px;
+    display: block;
+  }
+  .mobile_suites {
+    width: 100vw;
+    height: auto;
+  }
+  .mobile_suites ul {
+    width: 100%;
+  }
+  .mobile_suites ul li {
+    width: 100%;
+    height: 16.6666666667vh;
+    position: relative;
+    border: 1px solid white;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgb(0, 0, 0) 40%, rgba(3, 0, 111, 0) 100%);
+    display: flex;
+    align-items: center;
+  }
+  .mobile_suites ul li p {
+    width: 100%;
+    left: 0px;
+    font-family: redressed;
+    font-weight: normal;
+    font-size: 26px;
+    z-index: 1;
+    color: white;
+    text-indent: 20px;
+  }
+  .mobile_suites ul li img {
+    position: absolute;
+    right: 0px;
+    width: 60%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: var(--imgPosition);
+       object-position: var(--imgPosition);
+    z-index: -1;
+  }
+  .luxoSimples, .luxoStander, .glamour, .executiva, .presRom, .presPlus {
+    width: 100vw;
+    height: 100vh;
+    background-color: #000e40;
+  }
+  .luxoSimples:after, .luxoStander:after, .glamour:after, .executiva:after, .presRom:after, .presPlus:after {
+    content: "";
+    display: block;
+    width: 100vw;
+    height: 23px;
+  }
+  .luxoSimples picture, .luxoStander picture, .glamour picture, .executiva picture, .presRom picture, .presPlus picture {
+    display: block;
+    background-color: black;
+    width: 100%;
+    height: 150px;
+    background-image: var(--src);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: var(--imgPosition);
+  }
+  .luxoSimples picture h2, .luxoStander picture h2, .glamour picture h2, .executiva picture h2, .presRom picture h2, .presPlus picture h2 {
+    width: 100%;
+    color: rgba(255, 255, 255, 0.2);
+    padding: 55px 0px;
+    font-size: 40px;
+    font-family: redressed;
+    text-align: center;
+    background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%, rgb(0, 0, 0) 100%);
+  }
+  .luxoSimples .valores, .luxoSimples .descricao, .luxoSimples .galeria, .luxoStander .valores, .luxoStander .descricao, .luxoStander .galeria, .glamour .valores, .glamour .descricao, .glamour .galeria, .executiva .valores, .executiva .descricao, .executiva .galeria, .presRom .valores, .presRom .descricao, .presRom .galeria, .presPlus .valores, .presPlus .descricao, .presPlus .galeria {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: 2px solid white;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0px 2px 10px rgba(255, 255, 255, 0.6);
+    position: relative;
+  }
+  .luxoSimples .valores h3, .luxoSimples .descricao h3, .luxoSimples .galeria h3, .luxoStander .valores h3, .luxoStander .descricao h3, .luxoStander .galeria h3, .glamour .valores h3, .glamour .descricao h3, .glamour .galeria h3, .executiva .valores h3, .executiva .descricao h3, .executiva .galeria h3, .presRom .valores h3, .presRom .descricao h3, .presRom .galeria h3, .presPlus .valores h3, .presPlus .descricao h3, .presPlus .galeria h3 {
+    background-color: white;
+    text-align: center;
+    color: #000e40;
+    font-family: redressed;
+    font-size: 26px;
+  }
+  .luxoSimples .valores ul, .luxoSimples .descricao ul, .luxoSimples .galeria ul, .luxoStander .valores ul, .luxoStander .descricao ul, .luxoStander .galeria ul, .glamour .valores ul, .glamour .descricao ul, .glamour .galeria ul, .executiva .valores ul, .executiva .descricao ul, .executiva .galeria ul, .presRom .valores ul, .presRom .descricao ul, .presRom .galeria ul, .presPlus .valores ul, .presPlus .descricao ul, .presPlus .galeria ul {
+    list-style-type: disc !important;
+    font-family: oswald;
+    margin: 10px;
+  }
+  .luxoSimples .valores ul li, .luxoSimples .descricao ul li, .luxoSimples .galeria ul li, .luxoStander .valores ul li, .luxoStander .descricao ul li, .luxoStander .galeria ul li, .glamour .valores ul li, .glamour .descricao ul li, .glamour .galeria ul li, .executiva .valores ul li, .executiva .descricao ul li, .executiva .galeria ul li, .presRom .valores ul li, .presRom .descricao ul li, .presRom .galeria ul li, .presPlus .valores ul li, .presPlus .descricao ul li, .presPlus .galeria ul li {
+    color: white;
+  }
+  .luxoSimples .valores p, .luxoSimples .descricao p, .luxoSimples .galeria p, .luxoStander .valores p, .luxoStander .descricao p, .luxoStander .galeria p, .glamour .valores p, .glamour .descricao p, .glamour .galeria p, .executiva .valores p, .executiva .descricao p, .executiva .galeria p, .presRom .valores p, .presRom .descricao p, .presRom .galeria p, .presPlus .valores p, .presPlus .descricao p, .presPlus .galeria p {
+    font-family: oswald;
+    text-indent: 20px;
+    margin: 10px;
+    -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+  }
+  .luxoSimples .valores div, .luxoSimples .descricao div, .luxoSimples .galeria div, .luxoStander .valores div, .luxoStander .descricao div, .luxoStander .galeria div, .glamour .valores div, .glamour .descricao div, .glamour .galeria div, .executiva .valores div, .executiva .descricao div, .executiva .galeria div, .presRom .valores div, .presRom .descricao div, .presRom .galeria div, .presPlus .valores div, .presPlus .descricao div, .presPlus .galeria div {
+    width: calc(100% - 20px);
+    display: grid;
+    grid-template-columns: var(--columns);
+    gap: 6px 0px;
+    margin: 16px auto;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .luxoSimples .valores div img, .luxoSimples .descricao div img, .luxoSimples .galeria div img, .luxoStander .valores div img, .luxoStander .descricao div img, .luxoStander .galeria div img, .glamour .valores div img, .glamour .descricao div img, .glamour .galeria div img, .executiva .valores div img, .executiva .descricao div img, .executiva .galeria div img, .presRom .valores div img, .presRom .descricao div img, .presRom .galeria div img, .presPlus .valores div img, .presPlus .descricao div img, .presPlus .galeria div img {
+    width: 100%;
+    height: 120px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    display: block;
+    border: 2px solid white;
+    border-radius: 2px;
+  }
+  .luxoSimples .descricao, .luxoSimples .galeria, .luxoStander .descricao, .luxoStander .galeria, .glamour .descricao, .glamour .galeria, .executiva .descricao, .executiva .galeria, .presRom .descricao, .presRom .galeria, .presPlus .descricao, .presPlus .galeria {
+    margin-top: 20px;
+  }
+  .luxoSimples #viewFull, .luxoStander #viewFull, .glamour #viewFull, .executiva #viewFull, .presRom #viewFull, .presPlus #viewFull {
+    position: fixed;
+    top: 0px;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+  }
+  .luxoSimples #viewFull .alert, .luxoStander #viewFull .alert, .glamour #viewFull .alert, .executiva #viewFull .alert, .presRom #viewFull .alert, .presPlus #viewFull .alert {
+    width: calc(100% - 100px);
+    margin: 0px 50px;
+    display: block;
+    color: white;
+    position: fixed;
+    top: 10px;
+    text-align: center;
+    text-shadow: 1px 1px 2px black;
+  }
+  .luxoSimples #viewFull #image, .luxoStander #viewFull #image, .glamour #viewFull #image, .executiva #viewFull #image, .presRom #viewFull #image, .presPlus #viewFull #image {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .luxoSimples #viewFull button, .luxoStander #viewFull button, .glamour #viewFull button, .executiva #viewFull button, .presRom #viewFull button, .presPlus #viewFull button {
+    position: fixed;
+    height: 100vh;
+    width: 100px;
+    border: unset;
+  }
+  .luxoSimples #viewFull button i, .luxoStander #viewFull button i, .glamour #viewFull button i, .executiva #viewFull button i, .presRom #viewFull button i, .presPlus #viewFull button i {
+    color: white;
+    font-size: 40px;
+  }
+  .luxoSimples #viewFull #prev, .luxoStander #viewFull #prev, .glamour #viewFull #prev, .executiva #viewFull #prev, .presRom #viewFull #prev, .presPlus #viewFull #prev {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgba(254, 254, 254, 0) 100%);
+    left: 0px;
+  }
+  .luxoSimples #viewFull #next, .luxoStander #viewFull #next, .glamour #viewFull #next, .executiva #viewFull #next, .presRom #viewFull #next, .presPlus #viewFull #next {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(270deg, rgb(0, 0, 0) 0%, rgba(254, 254, 254, 0) 100%);
+    right: 0px;
+  }
+  .luxoSimples #viewFull #close, .luxoStander #viewFull #close, .glamour #viewFull #close, .executiva #viewFull #close, .presRom #viewFull #close, .presPlus #viewFull #close {
+    width: 100px;
+    height: 100px;
+    right: 0px;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .mobile_cardapio {
+    width: 100vw;
+    height: auto;
+  }
+  .mobile_cardapio ul {
+    width: 100%;
+  }
+  .mobile_cardapio ul li {
+    height: 14.2857142857vh;
+    position: relative;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgb(0, 0, 0) 40%, rgba(3, 0, 111, 0) 100%);
+    display: flex;
+    align-items: center;
+    border: 1px solid white;
+  }
+  .mobile_cardapio ul li img {
+    position: absolute;
+    right: 0px;
+    width: 60%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    z-index: -1;
+  }
+  .mobile_cardapio ul li p {
+    position: absolute;
+    left: 0px;
+    font-family: redressed;
+    color: white;
+    line-height: 100%;
+    width: 100%;
+    text-indent: 20px;
+    font-size: 26px;
+  }
+  .cardapioItens {
+    width: 100vw;
+    height: 100vh;
+    background-color: #000e40;
+  }
+  .cardapioItens .container {
+    border: 2px solid white;
+    border-radius: 0px 0px 20px 20px;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+    margin-bottom: 40px;
+    box-shadow: 0px 4px 10px 0px white;
+  }
+  .cardapioItens .container picture {
+    width: 100%;
+    height: 180px;
+    display: block;
+    position: relative;
+  }
+  .cardapioItens .container picture::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0px 0px 30px 30px black;
+  }
+  .cardapioItens .container picture img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: var(--imgPosition);
+       object-position: var(--imgPosition);
+  }
+  .cardapioItens .container h2 {
+    font-family: redressed;
+    text-align: center;
+    font-size: 40px;
+  }
+  .cardapioItens .container p.titulo {
+    font-family: oswald;
+    font-size: 22px;
+    text-decoration: underline;
+    text-indent: 10px;
+  }
+  .cardapioItens .container p.descricao {
+    font-family: oswald;
+    text-indent: 10px;
+    margin-left: 10px;
+    -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+  }
+  .cardapioItens .container p.descricao::after {
+    content: "";
+    width: 100vw;
+    height: 2px;
+    display: block;
+    background-color: gray;
+    margin: 10px 0px 10px -10px;
+  }
+  .cardapioItens .container p.descricao:last-child {
+    margin-bottom: 10px;
+  }
+  .cardapioItens .container p.descricao:last-child::after {
+    display: none;
+  }
+  .cardapioItens #bebidas {
+    margin-bottom: 0px;
+  }
+  .cardapioItens::after {
+    content: "";
+    width: 100%;
+    height: 20px;
+    display: block;
+  }
+  .mobile_contato ul {
+    width: 100vw;
+  }
+  .mobile_contato ul li {
+    height: 16.6666666667vh;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid gray;
+  }
+  .mobile_contato ul li img {
+    width: 96px;
+    height: 96px;
+    border-radius: 10px;
+  }
+  .mobile_contato ul li i {
+    font-size: 70px;
+    width: 96px;
+    height: 96px;
+  }
+  .mobile_contato ul li div {
+    width: 100%;
+  }
+  .mobile_contato ul li div h2 {
+    font-family: redressed;
+    text-align: left;
+  }
+  .mobile_contato ul li div p {
+    font-family: oswald;
+    text-indent: 10px;
+    -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+  }
+  .mobile_contato ul li div p a {
+    text-decoration: underline;
+  }
+  .mobile_contato li:nth-child(5) img, .mobile_contato li:nth-child(6) img {
+    padding: 11px;
+    border-radius: 22px;
+  }
+}/*# sourceMappingURL=style.css.map */

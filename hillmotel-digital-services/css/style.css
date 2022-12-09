@@ -1,0 +1,487 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Redressed&display=swap");
+:root {
+  --font1: roboto;
+  --font2: lobster;
+  --font3: oswald;
+  --font4: antom;
+  --font5: "fredoka one";
+  --font6: redressed;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body.index {
+  width: 100vw;
+  display: flex;
+  background-color: black;
+  --myVar-minWidth: 320px;
+}
+body.index div.center {
+  width: 100%;
+  min-width: var(--myVar-minWidth);
+  max-width: 550px;
+  height: calc(100vh - 126px);
+  margin: auto;
+  background-color: white;
+  margin-top: 60px;
+  margin-bottom: 66px;
+  box-shadow: 0px 0px 10px white;
+}
+body.index div.center iframe {
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+body.index .fixedTop, body.index .fixedBottom {
+  width: 100vw;
+  position: fixed;
+}
+body.index .fixedTop .centerFixed, body.index .fixedBottom .centerFixed {
+  width: 100%;
+  min-width: var(--myVar-minWidth);
+  height: 100%;
+  margin: auto;
+}
+body.index .fixedTop {
+  top: 0px;
+  height: 60px;
+}
+body.index .fixedTop .centerFixed .titulo-top {
+  width: 100%;
+  height: 60px;
+  color: white;
+  font-family: var(--font2);
+  text-align: center;
+  padding: 10px 0px;
+  background-color: gray;
+}
+body.index .fixedBottom {
+  bottom: 0px;
+  height: 66px;
+}
+body.index .fixedBottom .centerFixed {
+  position: relative;
+}
+body.index .fixedBottom .centerFixed::before {
+  content: "";
+  width: 100%;
+  height: 4px;
+  display: block;
+  position: absolute;
+  background-color: white;
+  bottom: 66px;
+  z-index: -1;
+}
+body.index .fixedBottom .centerFixed .box-btn-button {
+  width: 100%;
+  height: 66px;
+  color: white;
+  background-color: white;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgb(0, 0, 0) 30%, rgb(0, 10, 130) 100%);
+  display: flex;
+  list-style-type: none;
+  justify-content: space-evenly;
+  z-index: 1;
+}
+body.index .fixedBottom .centerFixed .box-btn-button li {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0px;
+  font-family: var(--font6);
+  font-weight: bold;
+  transition: 1s;
+}
+body.index .fixedBottom .centerFixed .box-btn-button li i {
+  font-size: 26px;
+}
+body.index .fixedBottom .centerFixed .box-btn-button li:first-child {
+  transform: translateY(-16px);
+}
+body.index .fixedBottom .centerFixed .selectButton {
+  width: 25%;
+  height: 66px;
+  display: flex;
+  position: absolute;
+  bottom: 26px;
+  transition: 0.5s;
+  z-index: -1;
+  left: 0%;
+}
+body.index .fixedBottom .centerFixed .selectButton:after {
+  content: "";
+  width: 66px;
+  height: 66px;
+  display: block;
+  background-color: rgb(0, 10, 130);
+  border-radius: 50%;
+  margin: auto;
+  border: 4px solid white;
+}
+
+body.cardapio {
+  background-color: black;
+  padding-bottom: 68px;
+}
+body.cardapio .container {
+  width: 100%;
+  height: auto;
+}
+body.cardapio .container .container-titulo-top {
+  width: 100%;
+  height: auto;
+  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  color: white;
+  padding: 10px 0px;
+  z-index: 40;
+  background-color: black;
+}
+body.cardapio .container .container-titulo-top h2 {
+  text-align: center;
+  font-family: var(--font2);
+}
+body.cardapio .container .container-titulo-top .bx-menu,
+body.cardapio .container .container-titulo-top .bx-x {
+  width: 50px;
+  height: 50px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-size: 40px;
+  text-align: center;
+  line-height: 50px;
+  -webkit-animation-iteration-count: 4;
+          animation-iteration-count: 4;
+}
+body.cardapio .container .boxFilter {
+  width: 100%;
+  max-height: 0px;
+  display: block;
+  overflow: hidden;
+}
+body.cardapio .container .boxFilter h3 {
+  width: 100%;
+  background-color: white;
+  color: black;
+  font-family: var(--font1);
+  text-align: center;
+  border-radius: 50px 50px 0px 0px;
+  margin: 10px 0px 0px 0px;
+}
+body.cardapio .container .boxFilter h3:nth-child(2) {
+  margin-bottom: 0px;
+}
+body.cardapio .container .boxFilter ul {
+  width: 100%;
+  height: auto;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+  padding: 10px;
+  border-radius: 0px 0px 20px 20px;
+}
+body.cardapio .container .boxFilter ul li {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-family: var(--font1);
+  padding: 10px;
+  margin: 4px;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: white;
+}
+body.cardapio .container picture {
+  width: 100%;
+  height: 200px;
+  display: block;
+  position: relative;
+}
+body.cardapio .container picture::after {
+  content: "";
+  width: 100%;
+  height: 200px;
+  display: block;
+  box-shadow: inset 0px 0px 40px 30px black;
+  position: absolute;
+  top: 0px;
+}
+body.cardapio .container picture img.foto-destaque {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 2s;
+}
+body.cardapio .container picture img.foto-destaque:last-child {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+body.cardapio .container .cardapio-itens {
+  width: 100%;
+  list-style-type: none;
+}
+body.cardapio .container .cardapio-itens .all-cont-itens {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 20px 20px 0px 0px;
+  margin: 20px 0px;
+  padding: 0px 10px;
+}
+body.cardapio .container .cardapio-itens .all-cont-itens li {
+  width: 100%;
+  color: white;
+  padding: 10px 10px;
+  border-bottom: 2px solid gray;
+  font-family: var(--font5);
+}
+body.cardapio .container .cardapio-itens .all-cont-itens li:first-child {
+  display: unset;
+  border: none;
+  padding: 0px;
+}
+body.cardapio .container .cardapio-itens .all-cont-itens li .itemValue,
+body.cardapio .container .cardapio-itens .all-cont-itens li .itemDescription {
+  width: 100%;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body.cardapio .container .cardapio-itens .all-cont-itens li .itemValue .value,
+body.cardapio .container .cardapio-itens .all-cont-itens li .itemDescription .value {
+  min-width: 80px;
+  text-align: right;
+}
+body.cardapio .container .cardapio-itens .all-cont-itens li .itemValue .description,
+body.cardapio .container .cardapio-itens .all-cont-itens li .itemDescription .description {
+  font-family: var(--font3);
+  color: white;
+}
+body.cardapio .container .cardapio-itens .all-cont-itens li .itemDescription {
+  margin: 4px auto;
+}
+body.cardapio .container .cardapio-itens .all-cont-itens li h3 {
+  color: black;
+  font-size: 20px;
+  text-align: center;
+  padding: 4px 0px;
+  background-color: white;
+  border-radius: 20px 20px 0px 0px;
+}
+
+body.catalogo {
+  background-color: black;
+  padding-bottom: 88px;
+}
+body.catalogo .container {
+  width: 100%;
+  height: auto;
+}
+body.catalogo .container .container-titulo-top {
+  width: 100%;
+  height: auto;
+  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  color: white;
+  padding: 10px 0px;
+  z-index: 40;
+  background-color: black;
+}
+body.catalogo .container .container-titulo-top h2 {
+  text-align: center;
+  font-family: var(--font2);
+}
+body.catalogo .container .container-titulo-top .bx-menu,
+body.catalogo .container .container-titulo-top .bx-x {
+  width: 50px;
+  height: 50px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-size: 40px;
+  text-align: center;
+  line-height: 50px;
+  -webkit-animation-iteration-count: 4;
+          animation-iteration-count: 4;
+}
+body.catalogo .container picture {
+  width: 100%;
+  height: 200px;
+  display: block;
+  position: relative;
+}
+body.catalogo .container picture::after {
+  content: "";
+  width: 100%;
+  height: 200px;
+  display: block;
+  box-shadow: inset 0px 0px 40px 30px black;
+  position: absolute;
+  top: 0px;
+}
+body.catalogo .container picture img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body.catalogo .container .catalogo-box-itens {
+  --foto-produto: 100px;
+  width: 96%;
+  height: auto;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  border: 2px solid white;
+  border-radius: 20px;
+  overflow: hidden;
+  padding-bottom: 20px;
+}
+body.catalogo .container .catalogo-box-itens h3 {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  text-align: center;
+  display: block;
+  font-family: var(--font5);
+  font-size: x-large;
+  border-bottom: 2px solid black;
+}
+body.catalogo .container .catalogo-box-itens .item {
+  width: 94%;
+  height: auto;
+  background-color: rgb(184, 0, 8);
+  background-color: white;
+  margin-top: 20px;
+  display: flex;
+  border-bottom: 2px solid black;
+  border-radius: 0px 0px 40px 0px;
+  overflow: hidden;
+  box-shadow: 2px 2px 6px rgb(255, 0, 255);
+}
+body.catalogo .container .catalogo-box-itens .item figure {
+  width: var(--foto-produto);
+  height: var(--foto-produto);
+  margin: 0px;
+  display: block;
+}
+body.catalogo .container .catalogo-box-itens .item figure img {
+  width: 100%;
+  height: 100%;
+}
+body.catalogo .container .catalogo-box-itens .item .description {
+  width: calc(100% - var(--foto-produto));
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+body.catalogo .container .catalogo-box-itens .item .description .titulo {
+  text-align: center;
+  font-family: var(--font5);
+  padding: 4px 0px;
+}
+body.catalogo .container .catalogo-box-itens .item .description button {
+  padding: 4px 10px;
+  margin: auto;
+  text-align: center;
+  border-radius: 4px;
+  background-color: #1800a3;
+  color: white;
+  border: none;
+}
+body.catalogo .container .catalogo-box-itens .item .description .valor {
+  width: 100%;
+  text-align: center;
+  font-family: var(--font3);
+  font-size: 24px;
+}
+body.catalogo .container .catalogo-box-itens .item .description .details {
+  font-family: var(--font3);
+  font-size: small;
+  max-height: 0px;
+  overflow: hidden;
+  text-indent: 16px;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  transition: 0.1s;
+}
+body.catalogo .container .catalogo-box-itens .item .description .details.on {
+  max-height: 100vh;
+  transition: max-height 1s;
+  padding: 10px;
+}
+
+.formulario {
+  width: 100%;
+  height: 100vh;
+  color: white;
+  display: flex;
+  background-color: black;
+}
+.formulario .google-forms {
+  width: 100%;
+  height: 100%;
+}
+
+.informacoes {
+  width: 100%;
+  height: auto;
+  background-color: black;
+  color: white;
+  padding: 0px 20px;
+  padding-bottom: 60px;
+}
+.informacoes h2 {
+  width: 100%;
+  text-align: center;
+  font-family: var(--font5);
+  padding: 10px 0px;
+}
+.informacoes .list {
+  list-style-position: inside;
+}
+.informacoes .list li {
+  margin-bottom: 30px;
+}
+.informacoes .list .pergunta {
+  font-family: var(--font5);
+  margin-bottom: 10px;
+}
+.informacoes .list .resposta {
+  font-family: var(--font3);
+}/*# sourceMappingURL=style.css.map */

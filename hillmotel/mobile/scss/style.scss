@@ -1,0 +1,12 @@
+@import '_fonts';
+@import '_variables';
+@import '_mixin.scss';
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+@import '_styleDesktop';
+@import '_styleMobile';
