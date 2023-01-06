@@ -1,513 +1,1289 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Redressed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+:root {
+  --font1: roboto;
+  --font2: lobster;
+  --font3: oswald;
+  --font4: antom;
+  --font5: "fredoka one";
+  --font6: redressed;
+  --font7: "open sans";
+}
+
+:root {
+  --color1: #ffffff;
+  --color2: #fff0ea;
+  --color3: #d4734c;
+  --color4: #c63800;
+  --color5: #772201;
+  --dark-color1: rgb(44, 51, 51);
+  --dark-color2: rgb(57, 91, 100);
+  --dark-color3: rgb(165, 201, 202);
+  --dark-color4: rgb(231, 246, 242);
+}
+
 * {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
-  text-decoration: none;
   list-style-type: none;
 }
 
-@media screen and (min-width: 601px) {
-  .mobile {
-    display: none;
+body.desktop {
+  width: 100%;
+  min-width: 800px;
+  margin: auto;
+  background-color: var(--color-2, #2C3333);
+}
+body.desktop.light-theme {
+  --black: black;
+  --unset: unset;
+  --none: none;
+  --vantagens-back-color: rgba(0, 0, 0, .1);
+  --color-1: #ffffff;
+  --color-2: #fff0ea;
+  --color-3: #d4734c;
+  --color-4: #c63800;
+  --color-5: #772201;
+}
+body.desktop .center {
+  width: 100%;
+  max-width: 1280px;
+  margin: auto;
+}
+body.desktop header {
+  width: 100%;
+  height: 70px;
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  z-index: 100;
+  color: var(--black, #E7F6F2);
+}
+body.desktop header div {
+  box-shadow: 0px 0px 20px black;
+  width: 100%;
+  max-width: 1280px;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-2, #395B64);
+}
+body.desktop header div h1.fantasy-name {
+  padding: 0px 20px;
+  font-family: var(--font2);
+}
+@media screen and (max-width: 850px) {
+  body.desktop header div h1.fantasy-name {
+    font-size: 26px;
   }
 }
-@media screen and (max-width: 600px) {
-  .desktop {
-    display: none;
+body.desktop header div nav.menu ul {
+  display: flex;
+  align-items: center;
+}
+body.desktop header div nav.menu ul li {
+  padding: 0px 14px;
+  border-right: 2px solid var(--black, #E7F6F2);
+  font-family: var(--font7);
+  cursor: pointer;
+  display: flex;
+}
+body.desktop header div nav.menu ul li:last-child {
+  border-right: none;
+}
+body.desktop header div nav.menu ul li:hover {
+  font-weight: bolder;
+}
+body.desktop header div nav.menu ul li img {
+  height: 32px;
+}
+body.desktop section.banner-casal div.comment {
+  height: 400px;
+  display: block;
+  position: relative;
+  margin-top: 400px;
+  overflow: hidden;
+  border-radius: 40px 40px 0px 0px;
+}
+body.desktop section.banner-casal div.comment h2 {
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  font-size: 28px;
+  letter-spacing: 2px;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  font-family: var(--font7);
+  background-color: var(--color-4, #A5C9CA);
+  text-shadow: 0px 0px 10px var(--none, black);
+}
+body.desktop section.banner-casal div.comment h2:last-child {
+  top: unset;
+  bottom: 0px;
+}
+body.desktop section.banner-casal div.comment img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+body.desktop section.banner-casal img.backgroundImg {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  object-position: bottom;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+}
+body.desktop section.precos div.center {
+  width: 100%;
+  font-family: var(--font7);
+  background-color: var(--color-1, #395B64);
+  padding: 80px 0px;
+  text-shadow: 0px 0px 10px var(--none, black);
+}
+body.desktop section.precos div.center h2 {
+  text-align: center;
+  font-size: 30px;
+  color: var(--black, #E7F6F2);
+}
+body.desktop section.precos div.center .box-prices {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-4, #E7F6F2);
+  font-weight: bold;
+  padding: 20px 0px;
+  column-gap: 6px;
+}
+@media screen and (max-width: 1280px) {
+  body.desktop section.precos div.center .box-prices {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    gap: 20px 50px;
   }
-  .myIframe {
-    width: 100vw;
-    height: calc(100vh - 59px - 52px);
-    margin-bottom: 55px;
-    margin-top: 52px;
-  }
-  .mobile_cabecalho {
-    width: 100vw;
-    position: relative;
-  }
-  .mobile_cabecalho h1 {
-    width: 100%;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    font-family: lobster;
-    text-align: center;
-    background-color: #c1c1c1;
-    font-weight: normal;
-    padding: 6px 0px;
-  }
-  .mobile_cabecalho .menu {
-    position: fixed;
-    bottom: 0px;
-    width: 100vw;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    padding: 6px 0px;
-    background-color: #c1c1c1;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    z-index: 1;
-  }
-  .mobile_cabecalho .menu li {
-    text-align: center;
-    width: 25%;
-    position: relative;
-    height: 47px;
-    transition: 0.2s linear;
-    bottom: 0px;
-  }
-  .mobile_cabecalho .menu li div {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
-  .mobile_cabecalho .menu li div i {
-    font-size: 26px;
-  }
-  .mobile_cabecalho .menu li div p {
-    font-family: redressed;
-  }
-  .mobile_cabecalho .seletor {
-    width: 25vw;
-    height: 59px;
-    position: fixed;
-    bottom: 20px;
-    left: 0%;
-    transition: 0.2s linear;
-  }
-  .mobile_cabecalho .seletor::before {
-    content: "";
-    display: block;
-    margin: auto;
-    border-radius: 50%;
-    width: 55px;
-    height: 55px;
-    background-color: #c1c1c1;
-    border: 2px solid blue;
-  }
-  .mobile_cabecalho .seletor::after {
-    content: "";
-    display: block;
-    position: fixed;
-    bottom: 59px;
-    margin: auto;
-    width: 100vw;
-    height: 2px;
-    background-color: blue;
-    z-index: -1;
-    left: 0px !important;
-  }
-  .mobile_inicio {
-    background-color: #000e40;
-  }
-  .mobile_inicio .destaques {
-    position: relative;
-    height: 180px;
-    width: 100%;
-  }
-  .mobile_inicio .destaques img {
-    position: absolute;
-    width: 100%;
-    height: 180px;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .mobile_inicio .destaques .visible {
-    transition: opacity 3s linear;
-    opacity: 1;
-  }
-  .mobile_inicio .destaques .invisible {
-    transition: opacity 2s linear;
+}
+body.desktop section.precos div.center .box-prices .card {
+  width: fit-content;
+  min-width: 190px;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  border: 2px solid;
+}
+body.desktop section.precos div.center .box-prices .card:hover {
+  transition: 0.5s;
+  background-color: var(--color-5, #2C3333);
+  transform: scale(1.1);
+  border-radius: 10px;
+  cursor: context-menu;
+}
+body.desktop section.precos div.center .box-prices .card:hover p {
+  color: white;
+}
+body.desktop section.precos div.center .box-prices .card:hover button {
+  transition: 0.5s;
+  background-color: var(--color-1, #A5C9CA);
+  color: var(--color-5, white);
+  text-shadow: 0px 0px 10px var(--none, black);
+}
+body.desktop section.precos div.center .box-prices .card p {
+  text-align: center;
+}
+body.desktop section.precos div.center .box-prices .card p .bxs-star,
+body.desktop section.precos div.center .box-prices .card p .bxs-star-half {
+  font-size: 16px;
+}
+body.desktop section.precos div.center .box-prices .card p .bxs-bed {
+  font-size: 36px;
+}
+body.desktop section.precos div.center .box-prices .card p.valor span {
+  font-size: 30px;
+}
+body.desktop section.precos div.center .box-prices .card p.periodo {
+  font-size: 12px;
+  text-align: right;
+  letter-spacing: 1px;
+}
+body.desktop section.precos div.center .box-prices .card p.nome-suite {
+  font-size: 24px;
+  margin: 10px 0px;
+}
+body.desktop section.precos div.center .box-prices .card button {
+  width: fit-content;
+  background-color: var(--color-5, #2C3333);
+  color: white;
+  padding: 6px 14px;
+  border: none;
+  margin: 2px auto;
+  font-weight: bolder;
+  border-radius: 4px;
+  cursor: pointer;
+}
+body.desktop section.precos .viewer-on {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fade-in;
+  animation-duration: 0.2s;
+  z-index: 101;
+}
+@keyframes fade-in {
+  0% {
     opacity: 0;
   }
-  .mobile_inicio .destaques ul {
-    width: 100%;
-    height: 6px;
-    position: absolute;
-    bottom: 10px;
-    left: 0px;
-    display: flex;
-    justify-content: center;
+  100% {
+    opacity: 1;
   }
-  .mobile_inicio .destaques ul li {
-    width: 20px;
-    height: 100%;
-    background-color: white;
-    border-radius: 3px;
-    margin: 0px 2px;
-    overflow: hidden;
+}
+body.desktop section.precos .viewer-on .photo-box {
+  width: 662px;
+  background-color: white;
+  position: relative;
+  border-radius: 10px;
+  animation: top-for-bottom;
+  animation-duration: 1s;
+  text-shadow: none;
+}
+@keyframes top-for-bottom {
+  0% {
+    transform: translateY(-200%);
   }
-  .mobile_inicio .destaques ul li div {
-    width: 0%;
-    height: 100%;
-    background-color: black;
+  100% {
+    transform: translateY(0);
   }
-  .mobile_inicio .destaques ul li .loading_complete {
-    transition: width 3s linear;
-    width: 100%;
+}
+body.desktop section.precos .viewer-on .photo-box .titulo {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 24px;
+}
+body.desktop section.precos .viewer-on .photo-box .photo {
+  height: 478px;
+  overflow: hidden;
+}
+body.desktop section.precos .viewer-on .photo-box .photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 0px 10px;
+}
+body.desktop section.precos .viewer-on .photo-box span {
+  position: absolute;
+  top: 0px;
+  left: 10px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+body.desktop section.precos .viewer-on .photo-box span i {
+  font-size: 40px;
+  cursor: pointer;
+}
+body.desktop section.precos .viewer-on .photo-box span.btn-left {
+  text-shadow: 0px 0px 2px black;
+}
+body.desktop section.precos .viewer-on .photo-box span.btn-right {
+  left: unset;
+  right: 10px;
+  text-shadow: 0px 0px 2px black;
+}
+body.desktop section.precos .viewer-on .photo-box span.btn-close {
+  align-items: unset;
+  left: unset;
+  right: 0px;
+  top: 0px;
+  height: fit-content;
+}
+body.desktop section.precos .viewer-on .photo-box span.btn-close i {
+  font-size: 30px;
+  width: fit-content;
+  height: fit-content;
+  color: black;
+}
+body.desktop section.precos .viewer-on .photo-box .thumb {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  overflow: hidden;
+}
+body.desktop section.precos .viewer-on .photo-box .thumb img {
+  width: 40px;
+  height: 40px;
+  padding: 0px;
+  object-fit: cover;
+  margin: 1px 1px;
+}
+body.desktop section.precos .viewer-on .price-box {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  animation: top-for-bottom;
+  animation-duration: 1s;
+  text-shadow: none;
+}
+@keyframes top-for-bottom {
+  0% {
+    transform: translateY(-200%);
   }
-  .mobile_inicio .mobile_welcome {
-    background-color: #000e40;
-    width: 100vw;
-    height: auto;
+  100% {
+    transform: translateY(0);
   }
-  .mobile_inicio .mobile_welcome h2 {
-    color: #c1c1c1;
-    font-family: oswald;
-    text-align: center;
-    padding: 20px 0px;
-  }
-  .mobile_inicio .mobile_welcome p {
-    background-color: white;
-    color: #000e40;
-    font-family: oswald;
-    margin: 0px 30px;
-    border-radius: 20px;
-    padding: 10px 20px;
-    -webkit-hyphens: auto;
-        -ms-hyphens: auto;
-            hyphens: auto;
-    text-align: justify;
-    box-shadow: 0px 0px 8px 8px white;
-  }
-  .mobile_inicio .mobile_welcome::after {
-    content: "";
-    width: 100%;
-    height: 30px;
-    display: block;
-  }
-  .mobile_suites {
-    width: 100vw;
-    height: auto;
-  }
-  .mobile_suites ul {
-    width: 100%;
-  }
-  .mobile_suites ul li {
-    width: 100%;
-    height: 16.6666666667vh;
-    position: relative;
-    border: 1px solid white;
-    background: rgb(0, 0, 0);
-    background: linear-gradient(90deg, rgb(0, 0, 0) 40%, rgba(3, 0, 111, 0) 100%);
-    display: flex;
-    align-items: center;
-  }
-  .mobile_suites ul li p {
-    width: 100%;
-    left: 0px;
-    font-family: redressed;
-    font-weight: normal;
-    font-size: 26px;
-    z-index: 1;
-    color: white;
-    text-indent: 20px;
-  }
-  .mobile_suites ul li img {
-    position: absolute;
-    right: 0px;
-    width: 60%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: var(--imgPosition);
-       object-position: var(--imgPosition);
-    z-index: -1;
-  }
-  .luxoSimples, .luxoStander, .glamour, .executiva, .presRom, .presPlus {
-    width: 100vw;
-    height: 100vh;
-    background-color: #000e40;
-  }
-  .luxoSimples:after, .luxoStander:after, .glamour:after, .executiva:after, .presRom:after, .presPlus:after {
-    content: "";
-    display: block;
-    width: 100vw;
-    height: 23px;
-  }
-  .luxoSimples picture, .luxoStander picture, .glamour picture, .executiva picture, .presRom picture, .presPlus picture {
-    display: block;
-    background-color: black;
-    width: 100%;
-    height: 150px;
-    background-image: var(--src);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: var(--imgPosition);
-  }
-  .luxoSimples picture h2, .luxoStander picture h2, .glamour picture h2, .executiva picture h2, .presRom picture h2, .presPlus picture h2 {
-    width: 100%;
-    color: rgba(255, 255, 255, 0.2);
-    padding: 55px 0px;
-    font-size: 40px;
-    font-family: redressed;
-    text-align: center;
-    background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%, rgb(0, 0, 0) 100%);
-  }
-  .luxoSimples .valores, .luxoSimples .descricao, .luxoSimples .galeria, .luxoStander .valores, .luxoStander .descricao, .luxoStander .galeria, .glamour .valores, .glamour .descricao, .glamour .galeria, .executiva .valores, .executiva .descricao, .executiva .galeria, .presRom .valores, .presRom .descricao, .presRom .galeria, .presPlus .valores, .presPlus .descricao, .presPlus .galeria {
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    border: 2px solid white;
-    border-radius: 0px 0px 10px 10px;
-    box-shadow: 0px 2px 10px rgba(255, 255, 255, 0.6);
-    position: relative;
-  }
-  .luxoSimples .valores h3, .luxoSimples .descricao h3, .luxoSimples .galeria h3, .luxoStander .valores h3, .luxoStander .descricao h3, .luxoStander .galeria h3, .glamour .valores h3, .glamour .descricao h3, .glamour .galeria h3, .executiva .valores h3, .executiva .descricao h3, .executiva .galeria h3, .presRom .valores h3, .presRom .descricao h3, .presRom .galeria h3, .presPlus .valores h3, .presPlus .descricao h3, .presPlus .galeria h3 {
-    background-color: white;
-    text-align: center;
-    color: #000e40;
-    font-family: redressed;
-    font-size: 26px;
-  }
-  .luxoSimples .valores ul, .luxoSimples .descricao ul, .luxoSimples .galeria ul, .luxoStander .valores ul, .luxoStander .descricao ul, .luxoStander .galeria ul, .glamour .valores ul, .glamour .descricao ul, .glamour .galeria ul, .executiva .valores ul, .executiva .descricao ul, .executiva .galeria ul, .presRom .valores ul, .presRom .descricao ul, .presRom .galeria ul, .presPlus .valores ul, .presPlus .descricao ul, .presPlus .galeria ul {
-    list-style-type: disc !important;
-    font-family: oswald;
-    margin: 10px;
-  }
-  .luxoSimples .valores ul li, .luxoSimples .descricao ul li, .luxoSimples .galeria ul li, .luxoStander .valores ul li, .luxoStander .descricao ul li, .luxoStander .galeria ul li, .glamour .valores ul li, .glamour .descricao ul li, .glamour .galeria ul li, .executiva .valores ul li, .executiva .descricao ul li, .executiva .galeria ul li, .presRom .valores ul li, .presRom .descricao ul li, .presRom .galeria ul li, .presPlus .valores ul li, .presPlus .descricao ul li, .presPlus .galeria ul li {
-    color: white;
-  }
-  .luxoSimples .valores p, .luxoSimples .descricao p, .luxoSimples .galeria p, .luxoStander .valores p, .luxoStander .descricao p, .luxoStander .galeria p, .glamour .valores p, .glamour .descricao p, .glamour .galeria p, .executiva .valores p, .executiva .descricao p, .executiva .galeria p, .presRom .valores p, .presRom .descricao p, .presRom .galeria p, .presPlus .valores p, .presPlus .descricao p, .presPlus .galeria p {
-    font-family: oswald;
-    text-indent: 20px;
-    margin: 10px;
-    -webkit-hyphens: auto;
-        -ms-hyphens: auto;
-            hyphens: auto;
-  }
-  .luxoSimples .valores div, .luxoSimples .descricao div, .luxoSimples .galeria div, .luxoStander .valores div, .luxoStander .descricao div, .luxoStander .galeria div, .glamour .valores div, .glamour .descricao div, .glamour .galeria div, .executiva .valores div, .executiva .descricao div, .executiva .galeria div, .presRom .valores div, .presRom .descricao div, .presRom .galeria div, .presPlus .valores div, .presPlus .descricao div, .presPlus .galeria div {
-    width: calc(100% - 20px);
+}
+body.desktop section.precos .viewer-on .price-box h2 {
+  padding-bottom: 6px;
+  color: black;
+}
+body.desktop section.precos .viewer-on .price-box th,
+body.desktop section.precos .viewer-on .price-box td {
+  padding: 0px 80px;
+  border: 1px solid;
+  border-spacing: 0;
+  margin: 0;
+  border-top-width: 0;
+  border-left-width: 0;
+}
+body.desktop section.precos .viewer-on .price-box tr:first-child th {
+  border-top-width: 1px;
+}
+body.desktop section.precos .viewer-on .price-box th:first-child {
+  border-left-width: 1px;
+}
+body.desktop section.precos .viewer-on .price-box td:first-child {
+  border-left-width: 1px;
+}
+body.desktop section.precos .viewer-on .price-box table {
+  border-spacing: 0;
+  margin: auto;
+  margin-bottom: 20px;
+}
+body.desktop section.precos .viewer-on .price-box .btn-close {
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  cursor: pointer;
+}
+body.desktop section.precos .viewer-on .price-box .btn-close i {
+  font-size: 20px;
+}
+body.desktop section.precos .viewer-on .price-box .description {
+  width: 460px;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  text-align: left;
+  margin: auto;
+}
+body.desktop section.precos .viewer-on .price-box .description p {
+  height: 28px;
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+}
+body.desktop section.precos .viewer-on .price-box .verify {
+  margin-top: 10px;
+  color: red;
+  font-size: small;
+  text-align: left;
+}
+body.desktop section.precos .viewer-off {
+  display: none;
+}
+body.desktop section.vantagens {
+  font-family: var(--font7);
+  background-color: var(--vantagens-back-color, #A5C9CA);
+  padding: 20px 0px;
+}
+body.desktop section.vantagens .center h2 {
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 30px;
+  text-shadow: 0px 0px 10px var(--none, black);
+  color: var(--black, #E7F6F2);
+}
+body.desktop section.vantagens .center .box {
+  display: grid;
+  grid-template-columns: repeat(3, 33.33%);
+  row-gap: 20px;
+}
+@media screen and (max-width: 1280px) {
+  body.desktop section.vantagens .center .box {
     display: grid;
-    grid-template-columns: var(--columns);
-    gap: 6px 0px;
-    margin: 16px auto;
-    align-items: center;
-    justify-content: space-evenly;
+    grid-template-columns: repeat(2, 50%);
+    row-gap: 20px;
   }
-  .luxoSimples .valores div img, .luxoSimples .descricao div img, .luxoSimples .galeria div img, .luxoStander .valores div img, .luxoStander .descricao div img, .luxoStander .galeria div img, .glamour .valores div img, .glamour .descricao div img, .glamour .galeria div img, .executiva .valores div img, .executiva .descricao div img, .executiva .galeria div img, .presRom .valores div img, .presRom .descricao div img, .presRom .galeria div img, .presPlus .valores div img, .presPlus .descricao div img, .presPlus .galeria div img {
-    width: 100%;
-    height: 120px;
-    -o-object-fit: cover;
-       object-fit: cover;
-    display: block;
-    border: 2px solid white;
-    border-radius: 2px;
-  }
-  .luxoSimples .descricao, .luxoSimples .galeria, .luxoStander .descricao, .luxoStander .galeria, .glamour .descricao, .glamour .galeria, .executiva .descricao, .executiva .galeria, .presRom .descricao, .presRom .galeria, .presPlus .descricao, .presPlus .galeria {
-    margin-top: 20px;
-  }
-  .luxoSimples #viewFull, .luxoStander #viewFull, .glamour #viewFull, .executiva #viewFull, .presRom #viewFull, .presPlus #viewFull {
-    position: fixed;
-    top: 0px;
+}
+body.desktop section.vantagens .center .box .card {
+  display: flex;
+  align-items: center;
+}
+body.desktop section.vantagens .center .box .card i {
+  font-size: 30px;
+  padding: 10px;
+  color: var(--color-5, #E7F6F2);
+  text-shadow: 0px 0px 10px var(--none, black);
+}
+body.desktop section.vantagens .center .box .card .description h3 {
+  margin-bottom: 4px;
+  color: #000;
+}
+body.desktop section.rate .center {
+  background-color: var(--color-1, #395B64);
+  padding: 80px 20px;
+  font-family: var(--font7);
+  text-align: center;
+}
+body.desktop section.rate .center h2 {
+  width: fit-content;
+  margin: auto;
+  font-size: 24px;
+  padding: 6px 20px;
+  background-color: var(--color-5, #A5C9CA);
+  color: #E7F6F2;
+  text-shadow: 0px 0px 10px var(--none, black);
+  border-radius: 20px 20px 0px 0px;
+}
+body.desktop section.rate .center .box {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  align-items: flex-start;
+  justify-content: space-evenly;
+  border: 4px solid var(--color-5, #A5C9CA);
+  padding: 40px 20px;
+  background-color: #fff;
+}
+@media screen and (max-width: 1280px) {
+  body.desktop section.rate .center .box {
     display: flex;
-    width: 100vw;
-    height: 100vh;
-    background-color: black;
-  }
-  .luxoSimples #viewFull .alert, .luxoStander #viewFull .alert, .glamour #viewFull .alert, .executiva #viewFull .alert, .presRom #viewFull .alert, .presPlus #viewFull .alert {
-    width: calc(100% - 100px);
-    margin: 0px 50px;
-    display: block;
-    color: white;
-    position: fixed;
-    top: 10px;
-    text-align: center;
-    text-shadow: 1px 1px 2px black;
-  }
-  .luxoSimples #viewFull #image, .luxoStander #viewFull #image, .glamour #viewFull #image, .executiva #viewFull #image, .presRom #viewFull #image, .presPlus #viewFull #image {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: contain;
-       object-fit: contain;
-  }
-  .luxoSimples #viewFull button, .luxoStander #viewFull button, .glamour #viewFull button, .executiva #viewFull button, .presRom #viewFull button, .presPlus #viewFull button {
-    position: fixed;
-    height: 100vh;
-    width: 100px;
-    border: unset;
-  }
-  .luxoSimples #viewFull button i, .luxoStander #viewFull button i, .glamour #viewFull button i, .executiva #viewFull button i, .presRom #viewFull button i, .presPlus #viewFull button i {
-    color: white;
-    font-size: 40px;
-  }
-  .luxoSimples #viewFull #prev, .luxoStander #viewFull #prev, .glamour #viewFull #prev, .executiva #viewFull #prev, .presRom #viewFull #prev, .presPlus #viewFull #prev {
-    background: rgb(0, 0, 0);
-    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgba(254, 254, 254, 0) 100%);
-    left: 0px;
-  }
-  .luxoSimples #viewFull #next, .luxoStander #viewFull #next, .glamour #viewFull #next, .executiva #viewFull #next, .presRom #viewFull #next, .presPlus #viewFull #next {
-    background: rgb(0, 0, 0);
-    background: linear-gradient(270deg, rgb(0, 0, 0) 0%, rgba(254, 254, 254, 0) 100%);
-    right: 0px;
-  }
-  .luxoSimples #viewFull #close, .luxoStander #viewFull #close, .glamour #viewFull #close, .executiva #viewFull #close, .presRom #viewFull #close, .presPlus #viewFull #close {
-    width: 100px;
-    height: 100px;
-    right: 0px;
-    top: 0px;
-    background-color: rgba(0, 0, 0, 0);
-  }
-  .mobile_cardapio {
-    width: 100vw;
-    height: auto;
-  }
-  .mobile_cardapio ul {
-    width: 100%;
-  }
-  .mobile_cardapio ul li {
-    height: 14.2857142857vh;
-    position: relative;
-    background: rgb(0, 0, 0);
-    background: linear-gradient(90deg, rgb(0, 0, 0) 40%, rgba(3, 0, 111, 0) 100%);
-    display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    border: 1px solid white;
+    row-gap: 50px;
+    width: 500px;
+    margin: auto;
   }
-  .mobile_cardapio ul li img {
-    position: absolute;
-    right: 0px;
-    width: 60%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    z-index: -1;
+}
+body.desktop section.rate .center .box img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+body.desktop section.cozinha {
+  font-family: var(--font7);
+  padding: 40px 0px;
+  background-color: var(--vantagens-back-color, #A5C9CA);
+  color: var(--black, #E7F6F2);
+  text-shadow: 0px 0px 10px var(--none, black);
+}
+body.desktop section.cozinha .center h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+body.desktop section.cozinha .center .box {
+  display: flex;
+  justify-content: center;
+  column-gap: 12px;
+}
+@media screen and (max-width: 1280px) {
+  body.desktop section.cozinha .center .box {
+    column-gap: 6px;
   }
-  .mobile_cardapio ul li p {
-    position: absolute;
-    left: 0px;
-    font-family: redressed;
-    color: white;
-    line-height: 100%;
-    width: 100%;
-    text-indent: 20px;
-    font-size: 26px;
+}
+body.desktop section.cozinha .center .box .card {
+  display: flex;
+  flex-direction: column;
+}
+body.desktop section.cozinha .center .box .card img {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border: 2px solid white;
+}
+body.desktop section.cozinha .center .box .card .description h3 {
+  text-align: center;
+  font-size: 24px;
+}
+body.desktop section.map .center {
+  background-color: var(--color-1, #395B64);
+  text-align: center;
+  padding: 80px 20px;
+}
+body.desktop section.map .center h2 {
+  width: fit-content;
+  margin: auto;
+  font-family: var(--font7);
+  background-color: var(--color-4, #A5C9CA);
+  border-radius: 20px 20px 0px 0px;
+  padding: 6px 20px;
+  color: #E7F6F2;
+  text-shadow: 0px 0px 10px var(--none, black);
+}
+body.desktop section.map .center iframe {
+  border: 4px solid var(--color-4, #A5C9CA);
+}
+body.desktop footer {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+body.desktop footer .box {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  padding: 20px;
+  font-family: var(--font7);
+}
+body.desktop footer .box .links {
+  border-right: 2px solid white;
+  padding: 0px 40px;
+}
+body.desktop footer .box .links li {
+  margin: 6px 0px;
+  cursor: pointer;
+}
+body.desktop footer .box .links li:first-child {
+  cursor: default;
+}
+body.desktop footer .box .links li h3 {
+  text-align: center;
+  margin: 6px 0px;
+}
+body.desktop footer .box .contato {
+  padding: 0px 40px;
+}
+body.desktop footer .box .contato li {
+  margin: 6px 0px;
+}
+body.desktop footer .box .contato li h3 {
+  text-align: center;
+  margin: 6px 0px;
+}
+body.desktop footer .box .contato li a {
+  text-decoration: none;
+  color: white;
+}
+body.desktop footer p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font7);
+  height: 40px;
+  background-color: black;
+  color: #fff;
+}
+
+.light {
+  --color-1: #ffffff;
+  --color-2: #fff0ea;
+  --color-3: #d4734c;
+  --color-4: #c63800;
+  --color-5: #772201;
+  --black: black;
+  --none: none;
+}
+.light .mobile {
+  --mobile-color: rgba(0, 0, 0, .7);
+}
+.light .home {
+  --rgb-white: 255,255,255;
+}
+.light .home .vantagens {
+  --vantagens-back-color: rgba(198, 56, 0, .2);
+}
+.light .all-suites {
+  --h3-color: $color4;
+  --p-color: rgba(black, .7);
+}
+
+.mobile {
+  --top-height: 40px;
+  --bottom-height: 56px;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-2, #2C3333);
+  color: var(--mobile-color, rgba(231, 246, 242, 0.7));
+}
+.mobile header {
+  width: 100vw;
+  height: var(--top-height);
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: var(--black, #E7F6F2);
+}
+.mobile header h1 {
+  text-align: center;
+  font-family: "lobster";
+}
+.mobile header i {
+  float: right;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  font-size: 32px;
+  margin: 4px;
+}
+.mobile nav.menu {
+  width: 100vw;
+  height: var(--bottom-height);
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  background-color: var(--color-2, #2C3333);
+}
+.mobile nav.menu ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.mobile nav.menu ul li {
+  width: 25%;
+  text-align: center;
+}
+.mobile nav.menu ul li i {
+  font-size: 24px;
+}
+.mobile nav.menu ul li p {
+  font-family: var(--font6);
+  font-weight: bolder;
+}
+.mobile nav.menu ul li.active {
+  color: var(--black, #E7F6F2);
+  filter: drop-shadow(0px 0px 4px var(--black, #E7F6F2));
+}
+.mobile section {
+  width: 100%;
+  height: calc(100vh - var(--bottom-height) - var(--top-height));
+}
+.mobile section iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.home {
+  background-color: var(--color-2, #2C3333);
+  opacity: 0;
+}
+.home.visible {
+  transition: opacity 1s;
+  opacity: 1;
+}
+.home section.fotos-casais picture {
+  width: 100%;
+  height: auto;
+}
+.home section.fotos-casais picture .casal-sensual {
+  width: 100%;
+  height: 220px;
+  display: block;
+  object-fit: cover;
+  object-position: bottom;
+}
+.home section.fotos-casais picture div {
+  width: 92%;
+  position: relative;
+  margin: auto;
+  margin-top: -30px;
+  border-radius: 20px 20px 0px 0px;
+  overflow: hidden;
+}
+.home section.fotos-casais picture div .casal-deitado {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  object-position: bottom;
+}
+.home section.fotos-casais picture div h3 {
+  background-color: var(--color-4, #A5C9CA);
+  color: rgba(var(--rgb-white, 0, 0, 0), 0.8);
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  margin: auto;
+  top: 0px;
+  left: 0px;
+  font-family: var(--font7);
+  padding: 4px 0px;
+}
+.home section.fotos-casais picture div h3:nth-child(3) {
+  top: unset;
+  bottom: 0px;
+}
+.home section.prices {
+  width: 92%;
+  margin: auto;
+  padding: 20px 0px 40px 0px;
+  text-align: center;
+  font-family: var(--font7);
+  font-weight: bolder;
+  background-color: var(--color-1, #395B64);
+}
+.home section.prices h2 {
+  padding: 0px;
+  color: var(--black, #E7F6F2);
+}
+.home section.prices .box-prices {
+  overflow: scroll;
+  display: grid;
+  grid-template-columns: repeat(6, 120px);
+  column-gap: 6px;
+  padding: 10px 6px;
+}
+.home section.prices .box-prices::-webkit-scrollbar:horizontal {
+  height: 4px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.home section.prices .box-prices::-webkit-scrollbar:vertical {
+  width: 0px;
+}
+.home section.prices .box-prices::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: var(--black, #E7F6F2);
+}
+.home section.prices .box-prices::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+.home section.prices .box-prices .card {
+  width: 120px;
+  border: 2px solid;
+  overflow: hidden;
+  background-color: var(--color-1, #A5C9CA);
+  color: var(--color-4, white);
+  text-shadow: 0px 0px 10px var(--none, black);
+}
+.home section.prices .box-prices .card .bxs-bed {
+  font-size: 28px;
+}
+.home section.prices .box-prices .card .nome-suite {
+  margin: 6px auto;
+}
+.home section.prices .box-prices .card .valor span {
+  font-size: 24px;
+}
+.home section.prices .box-prices .card .periodo {
+  text-align: right;
+  font-size: 10px;
+  margin-right: 6px;
+}
+.home section.prices .box-prices .card .link {
+  font-size: 10px;
+  margin-top: 10px;
+  color: #fff;
+  padding: 6px 0px;
+  background-color: var(--color-4, #2C3333);
+}
+.home section.vantagens {
+  width: 100%;
+  padding: 20px 0px 40px 0px;
+  font-family: var(--font7);
+  background-color: var(--vantagens-back-color, rgba(165, 201, 202, 0.7));
+}
+.home section.vantagens h2 {
+  margin: auto;
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 4px 0px;
+  color: var(--black, #E7F6F2);
+  text-shadow: 0px 0px 10px var(--none, black);
+}
+.home section.vantagens .center {
+  width: 92%;
+  margin: auto;
+}
+.home section.vantagens .center .box {
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
+}
+.home section.vantagens .center .box .card {
+  max-width: 400px;
+  margin: 0px auto;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  border-radius: 10px;
+  padding: 4px 10px;
+  background-color: var(--color-1, rgba(255, 255, 255, 0.6));
+  box-shadow: 2px 2px 4px black;
+  color: #000;
+}
+.home section.vantagens .center .box .card .bx {
+  font-size: 44px;
+  color: var(--color-4, #E7F6F2);
+  text-shadow: 0px 0px 10px var(--none, black);
+}
+.home section.vantagens .center .box .card .description h3 {
+  font-size: 16px;
+}
+.home section.vantagens .center .box .card .description p {
+  hyphens: auto;
+  font-size: 14px;
+}
+.home section.rate {
+  width: 92%;
+  margin: auto;
+  padding: 20px 0px 40px 0px;
+  font-family: var(--font7);
+  background-color: var(--color-1, #395B64);
+}
+.home section.rate .center h2 {
+  text-align: center;
+  font-weight: bolder;
+  padding: 10px;
+  color: #E7F6F2;
+  color: var(--black, #E7F6F2);
+  text-shadow: 0px 0px 10px var(--none, black);
+}
+.home section.rate .center .box {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.home section.rate .center .box div {
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #fff;
+  opacity: 0.8;
+  margin: 0px auto;
+}
+.home section.rate .center .box div img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin: auto;
+  border: 8px solid white;
+}
+.home section.rate .center .box span {
+  display: block;
+  width: 30%;
+  height: 2px;
+  margin: 10px auto;
+  background-color: var(--black, white);
+  opacity: 0.3;
+}
+.home section.my-footer {
+  display: flex;
+  align-items: flex-end;
+  font-family: var(--font7);
+  font-weight: bold;
+}
+.home section.my-footer p {
+  width: 100%;
+  text-align: center;
+  padding: 4px 0px;
+  color: var(--black, white);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.suites section {
+  width: 100vw;
+  height: 100vh;
+  font-family: var(--font7);
+  font-weight: bold;
+}
+.suites section ul {
+  width: 100%;
+  height: 100%;
+}
+.suites section ul li {
+  width: 100%;
+  height: calc(16.6666666667vh - 2px);
+  background-color: #fff;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: calc(16.6666666667vh - 2px);
+  position: relative;
+  margin-bottom: 2px;
+  transform: translate(100vw, 0);
+}
+.suites section ul li.move {
+  transition: transform 0.2s;
+  transition-delay: var(--transition-delay);
+  transform: translate(0, 0);
+}
+.suites section ul li::after {
+  content: "";
+  width: 60%;
+  height: 100%;
+  display: block;
+  background-color: unset;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(90deg, rgb(0, 0, 0) 70%, rgba(255, 255, 255, 0) 100%);
+}
+.suites section ul li:last-child {
+  margin-bottom: unset;
+}
+.suites section ul li p {
+  text-indent: 20px;
+  white-space: nowrap;
+  z-index: 1;
+  color: #fff;
+  font-size: 24px;
+}
+.suites section ul li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--var-object-position);
+}
+
+.cardapio {
+  width: 100%;
+  height: 100vh;
+  font-family: "open sans";
+}
+.cardapio .cardapio-menu {
+  width: 100%;
+  height: 100%;
+}
+.cardapio .cardapio-menu .cardapio-menu-opcoes {
+  position: relative;
+  height: calc(14.2857142857vh - 2px);
+  overflow: hidden;
+  margin-bottom: 2px;
+  transform: translate(100vw, 0);
+}
+.cardapio .cardapio-menu .cardapio-menu-opcoes.move-in {
+  transition: transform 0.2s;
+  transform: translate(0, 0);
+}
+.cardapio .cardapio-menu .cardapio-menu-opcoes div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  padding: 0px 30px;
+}
+.cardapio .cardapio-menu .cardapio-menu-opcoes div p {
+  color: #fff;
+  font-weight: bold;
+  font-size: 24px;
+}
+.cardapio .cardapio-menu .cardapio-menu-opcoes img {
+  position: absolute;
+  right: 0px;
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+}
+.cardapio .cardapio-menu .cardapio-menu-opcoes::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: unset;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(90deg, rgb(0, 0, 0) 50%, rgba(255, 255, 255, 0) 80%);
+}
+.cardapio .cardapio-menu .cardapio-menu-itens {
+  width: 100%;
+  overflow: hidden;
+  transition: 0.5s;
+  max-height: 0%;
+}
+.cardapio .cardapio-menu .cardapio-menu-itens.visible {
+  transition: 1s;
+  max-height: 100%;
+}
+.cardapio .cardapio-menu .cardapio-menu-itens li {
+  padding: 0px 10px;
+}
+.cardapio .cardapio-menu .cardapio-menu-itens li .title {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  color: var(--black, #E7F6F2);
+}
+.cardapio .cardapio-menu .cardapio-menu-itens li .title .bx {
+  color: var(--color-4, #A5C9CA);
+}
+.cardapio .cardapio-menu .cardapio-menu-itens li .description {
+  font-size: 12px;
+  color: var(--black, white);
+}
+.cardapio .cardapio-menu .cardapio-menu-itens li::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  display: block;
+  background-color: var(--black, white);
+  margin: 10px auto;
+  border-radius: 1px;
+  opacity: 0.4;
+}
+.cardapio .cardapio-menu .cardapio-menu-itens li:first-child {
+  margin-top: 5px;
+}
+.cardapio .cardapio-menu .cardapio-menu-itens li:last-child {
+  margin-bottom: 5px;
+}
+.cardapio .cardapio-menu .cardapio-menu-itens li:last-child::after {
+  display: none;
+}
+
+.contato {
+  opacity: 0;
+}
+.contato.visible {
+  opacity: 1;
+  transition: opacity 1s;
+}
+.contato section {
+  width: 100vw;
+  height: 100vh;
+  font-family: var(--font7);
+  background-color: var(--black, #2C3333);
+}
+.contato section ul {
+  width: 100%;
+  height: 100%;
+}
+.contato section ul li {
+  width: 100%;
+  height: calc(16.6666666667vh - 2px);
+  display: flex;
+  margin-bottom: 2px;
+  background-color: var(--color-1, #395B64);
+}
+.contato section ul li img {
+  width: auto;
+  height: 100%;
+  max-height: 100px;
+  object-fit: cover;
+  object-position: var(--var-object-position);
+  margin: auto 0px;
+}
+.contato section ul li div {
+  margin: auto 0px;
+  padding: 0px 10px;
+  color: var(--black, #E7F6F2);
+}
+.contato section ul li div .title {
+  font-weight: bold;
+}
+.contato section ul li div .description {
+  font-size: 14px;
+}
+.contato section ul li:nth-child(5) img {
+  border-radius: 18px;
+  border: 10px solid var(--color-1, #395B64);
+}
+.contato section ul li:last-child {
+  height: 16.6666666667vh;
+}
+
+.suite-view .all-suites {
+  width: 100%;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-family: var(--font7);
+}
+.suite-view .all-suites section {
+  display: flex;
+  flex-direction: column;
+}
+.suite-view .all-suites section .top {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+.suite-view .all-suites section .top img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+}
+.suite-view .all-suites section .top h2 {
+  width: 100%;
+  color: white;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  text-align: center;
+  padding: 10px 0px;
+  text-shadow: 0px 0px 10px black;
+}
+.suite-view .all-suites section .prices, .suite-view .all-suites section .description, .suite-view .all-suites section .galeria {
+  background-color: var(--none, #395B64);
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding: 0px 20px 0px 20px;
+}
+.suite-view .all-suites section .prices h3, .suite-view .all-suites section .description h3, .suite-view .all-suites section .galeria h3 {
+  color: var(--h3-color, #E7F6F2);
+  padding: 10px 0px;
+}
+.suite-view .all-suites section .prices p, .suite-view .all-suites section .description p, .suite-view .all-suites section .galeria p {
+  color: var(--p-color, rgba(255, 255, 255, 0.7));
+  max-width: 400px;
+  margin: 0px auto;
+}
+.suite-view .all-suites section .prices::after, .suite-view .all-suites section .description::after, .suite-view .all-suites section .galeria::after {
+  content: "";
+  width: 40%;
+  height: 4px;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.4);
+  margin: 20px auto 0px auto;
+  border-radius: 2px;
+}
+.suite-view .all-suites section .prices:last-child::after, .suite-view .all-suites section .description:last-child::after, .suite-view .all-suites section .galeria:last-child::after {
+  background-color: transparent;
+}
+.suite-view .all-suites section .prices p {
+  text-align: left;
+  font-size: 20px;
+}
+.suite-view .all-suites section .prices p span {
+  float: right;
+}
+.suite-view .all-suites section .description {
+  display: flex;
+  flex-direction: column;
+}
+.suite-view .all-suites section .description .flex p {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+}
+.suite-view .all-suites section .galeria .imagens {
+  width: 100%;
+  max-width: 400px;
+  margin: 0px auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  justify-content: center;
+}
+.suite-view .all-suites section .galeria .imagens img {
+  width: 64px;
+  min-width: 64px;
+  height: 64px;
+  object-fit: cover;
+}
+.suite-view .all-suites #viewer {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+.suite-view .all-suites #viewer div {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.suite-view .all-suites #viewer div img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.suite-view .all-suites #viewer div span {
+  color: #000;
+  position: absolute;
+  bottom: 0px;
+  background-color: white;
+}
+.suite-view .all-suites #viewer div span.btn-left {
+  left: 0px;
+  width: 50%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 40px;
+}
+.suite-view .all-suites #viewer div span.btn-right {
+  right: 0px;
+  width: 50%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 40px;
+}
+.suite-view .all-suites #viewer div span.btn-close {
+  width: 100%;
+  height: 40px;
+  bottom: unset;
+  top: 0px;
+  right: 0px;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.suite-view .all-suites .invisible {
+  display: none;
+}
+.suite-view .all-suites .visible {
+  display: unset;
+  animation-name: play;
+  animation-duration: 1s;
+}
+@keyframes play {
+  from {
+    transform: rotateY(90deg);
   }
-  .cardapioItens {
-    width: 100vw;
-    height: 100vh;
-    background-color: #000e40;
-  }
-  .cardapioItens .container {
-    border: 2px solid white;
-    border-radius: 0px 0px 20px 20px;
-    background-color: black;
-    color: white;
-    overflow: hidden;
-    margin-bottom: 40px;
-    box-shadow: 0px 4px 10px 0px white;
-  }
-  .cardapioItens .container picture {
-    width: 100%;
-    height: 180px;
-    display: block;
-    position: relative;
-  }
-  .cardapioItens .container picture::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    width: 100%;
-    height: 100%;
-    box-shadow: inset 0px 0px 30px 30px black;
-  }
-  .cardapioItens .container picture img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: var(--imgPosition);
-       object-position: var(--imgPosition);
-  }
-  .cardapioItens .container h2 {
-    font-family: redressed;
-    text-align: center;
-    font-size: 40px;
-  }
-  .cardapioItens .container p.titulo {
-    font-family: oswald;
-    font-size: 22px;
-    text-decoration: underline;
-    text-indent: 10px;
-  }
-  .cardapioItens .container p.descricao {
-    font-family: oswald;
-    text-indent: 10px;
-    margin-left: 10px;
-    -webkit-hyphens: auto;
-        -ms-hyphens: auto;
-            hyphens: auto;
-  }
-  .cardapioItens .container p.descricao::after {
-    content: "";
-    width: 100vw;
-    height: 2px;
-    display: block;
-    background-color: gray;
-    margin: 10px 0px 10px -10px;
-  }
-  .cardapioItens .container p.descricao:last-child {
-    margin-bottom: 10px;
-  }
-  .cardapioItens .container p.descricao:last-child::after {
-    display: none;
-  }
-  .cardapioItens #bebidas {
-    margin-bottom: 0px;
-  }
-  .cardapioItens::after {
-    content: "";
-    width: 100%;
-    height: 20px;
-    display: block;
-  }
-  .mobile_contato ul {
-    width: 100vw;
-  }
-  .mobile_contato ul li {
-    height: 16.6666666667vh;
-    display: flex;
-    align-items: center;
-    border-bottom: 2px solid gray;
-  }
-  .mobile_contato ul li img {
-    width: 96px;
-    height: 96px;
-    border-radius: 10px;
-  }
-  .mobile_contato ul li i {
-    font-size: 70px;
-    width: 96px;
-    height: 96px;
-  }
-  .mobile_contato ul li div {
-    width: 100%;
-  }
-  .mobile_contato ul li div h2 {
-    font-family: redressed;
-    text-align: left;
-  }
-  .mobile_contato ul li div p {
-    font-family: oswald;
-    text-indent: 10px;
-    -webkit-hyphens: auto;
-        -ms-hyphens: auto;
-            hyphens: auto;
-  }
-  .mobile_contato ul li div p a {
-    text-decoration: underline;
-  }
-  .mobile_contato li:nth-child(5) img, .mobile_contato li:nth-child(6) img {
-    padding: 11px;
-    border-radius: 22px;
+  to {
+    transform: rotateY(0deg);
   }
 }/*# sourceMappingURL=style.css.map */

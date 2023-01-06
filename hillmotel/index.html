@@ -1,359 +1,266 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VL3HNPB829"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-VL3HNPB829');
-    </script>
+    <script src="./script/cabecalho.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="O melhor motel da Região dos Lagos. Venha conhecer! Suítes com hidromassagem a partir de R$ 91,00!">
+    <meta name="description" content="O melhor motel da Região dos Lagos. Venha conhecer! Suítes a partir de R$ 91,00!">
     <meta name="robots" content="index, follow">
     <meta name="keywords" content="motel, hotel, pousada, região dos lagos, suítes, hidromassagem, piscina, pernoite, lua de mel, aniversário, casamento, prazer, amor">
     <link rel="canonical" href="http://www.hillmotel.com.br">
-    <meta http-equiv="refresh" content="">
-    <link rel="stylesheet" href="css/style.css">
-    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Motel Cravo e Canela</title>
-    <!-- <meta http-equiv="cache-control" content="no-cache, no-store"> -->
-    <!-- <meta http-equiv="Pragma" content="no-cache, no-store"> -->
 </head>
-<body>
-    <script>
-        if (window.screen.width <= 600 ) {
-        location.href = 'mobile/'
+
+<script>
+    setInterval(function(){
+        if (window.screen.width <= 800 ) {
+        location.href = 'mobile.html'
         }
-    </script>
-    <div class="container">
-        <h1 class="titulo_pagina">Motel Cravo e Canela</h1>
-        <ul class="menu">
-            <li><a href="#">Início</a></li>
-            <li><a href="#suites">Suítes</a></li>
-            <li><a href="#cardapio">Cardápio</a></li>
-            <li><a href="#contato">Contato</a></li>
-            <li onclick="window.open('mailto:rh@hillmotel.com.br?subject=[***APAGUE E ESCREVA SEU NOME AQUI!***]&body=[***APAGUE E CONTE-NOS ALGO SOBRE VOCÊ, AH E NÃO ESQUEÇA DE ANEXAR SEU CURRÍCULO!***]')" style="cursor:pointer;"><a>Trabalhe Conosco</a></li>
-        </ul>
-        <picture class="destaques">
-            <img class="visible" style="--pos: center;" src="midias/jpg/destaques/1.jpg" alt="Destaques">
-            <img class="visible" style="--pos: center;" src="midias/jpg/destaques/5.jpg" alt="Destaques">
-            <img class="visible" style="--pos: center;" src="midias/jpg/destaques/6.jpg" alt="Destaques">
-            <img class="visible" style="--pos: center;" src="midias/jpg/destaques/7.jpg" alt="Destaques">
-            <img class="visible" style="--pos: center;" src="midias/jpg/destaques/8.jpg" alt="Destaques">
-            <img class="visible" style="--pos: center;" src="midias/jpg/destaques/9.jpg" alt="Destaques">
-            <img class="visible" style="--pos: center;" src="midias/jpg/destaques/10.jpg" alt="Destaques">
-            <img class="visible" style="--pos: center; transition-duration: 2.5s;" src="midias/jpg/destaques/12.jpg" alt="Destaques">
-            <ul>
-                <li class="loading"><div></div></li>
-                <li class="loading"><div></div></li>
-                <li class="loading"><div></div></li>
-                <li class="loading"><div></div></li>
-                <li class="loading"><div></div></li>
-                <li class="loading"><div></div></li>
-                <li class="loading"><div></div></li>
-                <li class="loading"><div></div></li>
+    }, 1000)
+</script>
+
+<body class="desktop light-theme">
+    <header>
+        <div class="center">
+            <h1 class="fantasy-name">Motel Cravo e Canela</h1>
+            <nav class="menu">
+                <ul>
+                    <li onclick="theme()"><i class='btn-theme bx bxs-sun'></i></li>
+                    <li onclick="goTo('suites')">Suítes</li>
+                    <li onclick="goTo('cozinha')">Cardápio</li>
+                    <li onclick="goTo('map')">Localização</li>
+                    <li onclick="goTo('footer')">Contato</li>
+                    <li>
+                        <img onclick="window.open('https://wa.me/5522992119010')" src="./midias/png/whatsapp.png" alt="whatsapp">
+                        <img onclick="window.open('https://pt-br.facebook.com/motelcravoecanela/')" src="./midias/png/facebook.png" alt="facebook">
+                        <img onclick="window.open('https://www.instagram.com/motel_cravo_e_canela/')" src="./midias/png/instagram.png" alt="instagram">
+                        <!-- <img src="./midias/png/maps.png" alt="maps"> -->
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="banner-casal">
+        <div class="comment center">
+            <img src="./midias/jpg/casal-deitado.jpg" alt="">
+            <h2>Cansado da rotina?</h2>
+            <h2>Parabéns, você veio ao lugar certo!</h2>
+        </div>
+        <img class="backgroundImg" src="./midias/jpg/casal-sensual.jpg" alt="">
+    </section>
+    <section id="suites" class="precos">
+        <div class="center">
+            <h2>Confira o preço de nossas suítes</h2>
+            <div class="box-prices">
+                <div class="card">
+                    <p><i class='bx bxs-star'></i><i class='bx bxs-star'></i></p>
+                    <p><i class='bx bxs-bed'></i></p>
+                    <p class="nome-suite">Luxo Simples</p>
+                    <p class="valor">R$ <span>91,</span>00</p>
+                    <p class="periodo">2hrs</p>
+                    <button onclick="activeViewer('Suíte Luxo Simples', 'luxoSimples', 4)">fotos</button>
+                    <button onclick="activePrice(0)">preços e descrição</button>
+                </div>
+                <div class="card">
+                    <p><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half'></i></p>
+                    <p><i class='bx bxs-bed'></i></p>
+                    <p class="nome-suite">Luxo Stander</p>
+                    <p class="valor">R$ <span>102,</span>00</p>
+                    <p class="periodo">2hrs</p>
+                    <button onclick="activeViewer('Suíte Luxo Stander', 'luxoStander', 8)">fotos</button>
+                    <button onclick="activePrice(1)">preços e descrição</button>
+                </div>
+                <div class="card">
+                    <p><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></p>
+                    <p><i class='bx bxs-bed'></i></p>
+                    <p class="nome-suite">Glamour</p>
+                    <p class="valor">R$ <span>132,</span>00</p>
+                    <p class="periodo">2hrs</p>
+                    <button onclick="activeViewer('Suíte Glamour', 'glamour', 16)">fotos</button>
+                    <button onclick="activePrice(2)">preços e descrição</button>
+                </div>
+                <div class="card">
+                    <p><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i
+                            class='bx bxs-star'></i></p>
+                    <p><i class='bx bxs-bed'></i></p>
+                    <p class="nome-suite">Executiva</p>
+                    <p class="valor">R$ <span>183,</span>00</p>
+                    <p class="periodo">2hrs</p>
+                    <button onclick="activeViewer('Suíte Executiva', 'executiva', 20)">fotos</button>
+                    <button onclick="activePrice(3)">preços e descrição</button>
+                </div>
+                <div class="card">
+                    <p><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i
+                            class='bx bxs-star'></i><i class='bx bxs-star'></i></p>
+                    <p><i class='bx bxs-bed'></i></p>
+                    <p class="nome-suite">Pres. Romana</p>
+                    <p class="valor">R$ <span>250,</span>00</p>
+                    <p class="periodo">2hrs</p>
+                    <button onclick="activeViewer('Suíte Presidencial Romana', 'presRom', 20)">fotos</button>
+                    <button onclick="activePrice(4)">preços e descrição</button>
+                </div>
+                <div class="card">
+                    <p><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i
+                            class='bx bxs-star'></i><i class='bx bxs-star'></i></p>
+                    <p><i class='bx bxs-bed'></i></p>
+                    <p class="nome-suite">Pres. Plus</p>
+                    <p class="valor">R$ <span>288,</span>00</p>
+                    <p class="periodo">2hrs</p>
+                    <button onclick="activeViewer('Suíte Presidencial Plus', 'presPlus', 24)">fotos</button>
+                    <button onclick="activePrice(5)">preços e descrição</button>
+                </div>
+            </div>
+            <div class="viewer-off" id="viewer">
+            </div>
+        </div>
+    </section>
+    <section class="vantagens">
+        <div class="center">
+            <h2>Vantagens do nosso Motel</h2>
+            <div class="box">
+                <div class="card">
+                    <i class='bx bx-car'></i>
+                    <div class="description">
+                        <h3>Garagem privativa</h3>
+                        <p>Deixe seu carro seguro e entre nas nossas suítes com toda a discrição.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <i class='bx bx-time'></i>
+                    <div class="description">
+                        <h3>Aberto 24hrs</h3>
+                        <p>Curta seu momento sem se preocupar com o horário.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <i class='bx bx-wind'></i>
+                    <div class="description">
+                        <h3>Ar condicionado</h3>
+                        <p>O clima pode esquentar, mas na sua suíte vai estar sempre fresquinho.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <i class='bx bx-dish'></i>
+                    <div class="description">
+                        <h3>Cozinha</h3>
+                        <p>Nossa cozinha está preparada 24 horas por dia para atender aos nossos clientes.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <i class='bx bx-lock-alt'></i>
+                    <div class="description">
+                        <h3>Segurança</h3>
+                        <p>Além de conforto, você tem tranquilidade de curtir com total segurança nas nossas
+                            dependências.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <i class='bx bx-phone-call'></i>
+                    <div class="description">
+                        <h3>Melhor atendimento</h3>
+                        <p>Nossos funcionários têm presteza no atendimento e são treinados para atendê-lo com total
+                            descrição.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="rate">
+        <div class="center">
+            <h2>Veja o que falam sobre nosso Motel</h2>
+            <div class="box">
+                <img src="./midias/jpg/rate-a.jpg">
+                <img src="./midias/jpg/rate-b.jpg">
+                <img src="./midias/jpg/rate-c.jpg">
+            </div>
+        </div>
+    </section>
+    <section id="cozinha" class="cozinha">
+        <div class="center">
+            <h2>Nossa cozinha tem muito a oferecer</h2>
+            <div class="box">
+                <div class="card">
+                    <img src="./midias/jpg/cardapio/carnes.jpg">
+                    <div class="description">
+                        <h3>Carnes</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./midias/jpg/cardapio/frango.jpg">
+                    <div class="description">
+                        <h3>Frango</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./midias/jpg/cardapio/porcoes.jpg">
+                    <div class="description">
+                        <h3>Porções</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./midias/jpg/cardapio/matinais.jpg">
+                    <div class="description">
+                        <h3>Matinais</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./midias/jpg/cardapio/drinks.jpg">
+                    <div class="description">
+                        <h3>Drinks</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./midias/jpg/cardapio/bebidas.jpg">
+                    <div class="description">
+                        <h3>Bebidas</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./midias/jpg/cardapio/peixe.jpg">
+                    <div class="description">
+                        <h3>Peixes</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="map" class="map">
+        <div class="center">
+            <h2>Nossa localização</h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14703.195775220336!2d-42.440785!3d-22.8838844!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe4846fe3e1306dda!2sMotel%20Cravo%20e%20Canela!5e0!3m2!1spt-BR!2sbr!4v1669907009315!5m2!1spt-BR!2sbr"
+                width="100%" height="450" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="box">
+            <ul class="links">
+                <li>
+                    <h3>Links úteis</h3>
+                </li>
+                <li onclick="window.open('https://pt-br.facebook.com/motelcravoecanela/')"><i class='bx bxl-facebook'></i> Facebook</li>
+                <li onclick="window.open('https://www.instagram.com/motel_cravo_e_canela/')"><i class='bx bxl-instagram'></i> Instagram</li>
+                <li onclick="window.open('https://wa.me/5522992119010')"><i class='bx bxl-whatsapp'></i> Whatsapp</li>
+                <li onclick="window.open('https://www.google.com/maps/place/Motel+Cravo+e+Canela/@-22.8838803,-42.4407917,15z/data=!4m8!3m7!1s0x0:0xe4846fe3e1306dda!5m2!4m1!1i2!8m2!3d-22.8838803!4d-42.4407917')"><i class='bx bx-map'></i> Maps</li>
+                <li onclick="window.open('mailto:hillmotel@hotmail.com?subject=[***APAGUE E ESCREVA SEU NOME AQUI!***]&body=[***APAGUE E CONTE-NOS ALGO SOBRE VOCÊ, AH E NÃO ESQUEÇA DE ANEXAR SEU CURRÍCULO!***]')"><i class='bx bx-briefcase'></i> Trabalhe conosco</li>
             </ul>
-        </picture>
-        <div class="divisor">
-            <h2>Conheça nossas suítes!</h2>
-        </div>
-        <div id="suites" class="my_box" style="--my_height_box: 335px;">
-            <div class="cont" style="--myfloat: left;">
-                <picture class="mypicture"  style="--my_transform: translateX(300px);">
-                    <img src="midias/jpg/galeria/luxoSimples/4.jpg" alt="Suíte Luxo Simples">
-                    <button onclick="openImage('luxoSimples/', 4)">+ fotos</button>
-                </picture>
-                <div class="description">
-                    <h2>Suíte Luxo Simples</h2>
-                    <ul class="valores">
-                        <li>02 horas = R$ &nbsp 91,00</li>
-                        <li>04 horas = R$ 128,00</li>
-                        <li>06 horas = R$ 165,00</li>
-                        <li>08 horas = R$ 201,00</li>
-                        <li>12 horas = R$ 238,00</li>
-                    </ul>
-                    <p class="descricao">A Suíte Luxo Simples é uma suíte que disponibiliza TV 32", som, ar condicionado, frigobar e garagem privativa.</p>
-                </div>
-            </div>
-        </div>
-        <div class="my_box" style="--my_height_box: 357px;">
-            <div class="cont" style="--myfloat: right;">
-                <div class="description">
-                    <h2>Suíte Luxo Stander</h2>
-                    <ul class="valores">
-                        <li>02 horas = R$ 102,00</li>
-                        <li>04 horas = R$ 158,00</li>
-                        <li>06 horas = R$ 214,00</li>
-                        <li>08 horas = R$ 270,00</li>
-                        <li>12 horas = R$ 326,00</li>
-                    </ul>
-                    <p class="descricao">A Suíte Luxo Stander é uma suíte que disponibiliza TV 32", som, ar condicionado, frigobar, banheira de hidromassagem pequena e garagem privativa.</p>
-                </div>
-                <picture class="mypicture"  style="--my_transform: translateX(-300px);">
-                    <img src="midias/jpg/galeria/luxoStander/8.jpg" alt="Suíte Luxo Simples">
-                    <button onclick="openImage('luxoStander/', 8)">+ fotos</button>
-                </picture>
-            </div>
-        </div>
-        <div class="my_box" style="--my_height_box: 401px;">
-            <div class="cont" style="--myfloat: left;">
-                <picture class="mypicture"  style="--my_transform: translateX(300px);">
-                    <img src="midias/jpg/galeria/glamour/8.jpg" alt="Suíte Luxo Simples">
-                    <button onclick="openImage('glamour/', 16)">+ fotos</button>
-                </picture>
-                <div class="description">
-                    <h2>Suíte Glamour</h2>
-                    <ul class="valores">
-                        <li>02 horas = R$ 132,00</li>
-                        <li>04 horas = R$ 204,00</li>
-                        <li>06 horas = R$ 277,00</li>
-                        <li>08 horas = R$ 350,00</li>
-                        <li>12 horas = R$ 422,00</li>
-                    </ul>
-                    <p class="descricao">A Suíte Glamour é uma suíte que disponibiliza TV 32", som, ar condicionado, frigobar e banheira de hidromassagem casal. Também possui espelho no teto, visão da hidromassagem mesmo estando na cama, uma bela decoração e garagem privativa.</p>
-                </div>
-            </div>
-        </div>
-        <div class="my_box" style="--my_height_box: 445px;">
-            <div class="cont" style="--myfloat: right;">
-                <div class="description">
-                    <h2>Suíte Executiva Luxo</h2>
-                    <ul class="valores">
-                        <li>02 horas = R$ 183,00</li>
-                        <li>04 horas = R$ 284,00</li>
-                        <li>06 horas = R$ 384,00</li>
-                        <li>08 horas = R$ 485,00</li>
-                        <li>12 horas = R$ 585,00</li>
-                    </ul>
-                    <p class="descricao">A Suíte Executiva é uma suíte que disponibiliza TV 32", som individual*, ar condicionado, frigobar e banheira de hidromassagem grande (redonda ou retangular). Essa suíte também possui espelho no teto, espelhos ao redor da suíte, móveis sado*, poltrona erótica*, sauna seca, cama redonda, uma bela decoração e garagem privativa.</p>
-                    <p class="descricao">*Verificar disponibilidade dos itens!</p>
-                </div>
-                <picture class="mypicture"  style="--my_transform: translateX(-300px);">
-                    <img src="midias/jpg/galeria/executiva/2.jpg" alt="Suíte Luxo Simples">
-                    <button onclick="openImage('executiva/', 20)">+ fotos</button>
-                </picture>
-            </div>
-        </div>
-        <div class="my_box" style="--my_height_box: 467px;">
-            <div class="cont" style="--myfloat: left;">
-                <picture class="mypicture"  style="--my_transform: translateX(300px);">
-                    <img src="midias/jpg/galeria/presRom/1.jpg" alt="Suíte Luxo Simples">
-                    <button onclick="openImage('presRom/', 20)">+ fotos</button>
-                </picture>
-                <div class="description">
-                    <h2>Suíte Presidencial Romana</h2>
-                    <ul class="valores">
-                        <li>02 horas = R$ 250,00</li>
-                        <li>04 horas = R$ 375,00</li>
-                        <li>06 horas = R$ 500,00</li>
-                        <li>08 horas = R$ 624,00</li>
-                        <li>12 horas = R$ 749,00</li>
-                    </ul>
-                    <p class="descricao">A Suíte Presidencial Romana é uma suíte com decoração temática e que disponibiliza TV 32", som individual*, ar condicionado, piscina, frigobar (no quarto e na piscina), banheira de hidromassagem grande (redonda) e cama redonda. Essa suíte também possui espelho no teto, espelhos ao redor da suíte, poltrona erótica, cadeira do sultão, sauna a vapor, jogo de luzes coloridas e garagem privativa.</p>
-                    <p class="descricao">*Verificar disponibilidade dos itens!</p>
-                </div>
-            </div>
-        </div>
-        <div class="my_box" style="--my_height_box: 445px;">
-            <div class="cont" style="--myfloat: right;">
-                <div class="description">
-                    <h2>Suíte Presidencial Plus</h2>
-                    <ul class="valores">
-                        <li>02 horas = R$ 288,00</li>
-                        <li>04 horas = R$ 431,00</li>
-                        <li>06 horas = R$ 575,00</li>
-                        <li>08 horas = R$ 719,00</li>
-                        <li>12 horas = R$ 863,00</li>
-                    </ul>
-                    <p class="descricao">A Suíte Presidencial Plus é uma suíte que disponibiliza TV 32", som individual, piscina, frigobar (no quarto e na piscina), ar condicionado, espelho no teto, espelhos ao redor da suíte, pole dance, sauna a vapor, cama redonda, jogo de luzes coloridas, banheira de hidromassagem grande (redonda) e garagem privativa.</p>
-                    <p class="descricao">*Verificar disponibilidade dos itens!</p>
-                </div>
-                <picture class="mypicture"  style="--my_transform: translateX(-300px);">
-                    <img src="midias/jpg/galeria/presPlus/1.jpg" alt="Suíte Luxo Simples">
-                    <button onclick="openImage('presPlus/', 24)">+ fotos</button>
-                </picture>
-            </div>
-        </div>
-        <div id="cardapio" class="cardapio">
-            <h2>Cardápio</h2>
-            <ul class="cardapio_categorias">
-                <li class="active" onclick="openCardapio(0)">
-                    <img src="midias/jpg/cardapio/carnes.jpg" alt="Carnes">
-                    <p>Carnes</p>
+            <ul class="contato">
+                <li>
+                    <h3>Telefones</h3>
                 </li>
-                <li onclick="openCardapio(1)">
-                    <img src="midias/jpg/cardapio/frango.jpg" alt="Frango">
-                    <p>Frango</p>
-                </li>
-                <li onclick="openCardapio(2)">
-                    <img src="midias/jpg/cardapio/peixe.jpg" alt="Peixe">
-                    <p>Peixe</p>
-                </li>
-                <li onclick="openCardapio(3)">
-                    <img src="midias/jpg/cardapio/matinais.jpg" alt="Matinais">
-                    <p>Matinais</p>
-                </li>
-                <li onclick="openCardapio(4)">
-                    <img src="midias/jpg/cardapio/porcoes.jpg" alt="Porções">
-                    <p>Porções</p>
-                </li>
-                <li onclick="openCardapio(5)">
-                    <img src="midias/jpg/cardapio/drinks.jpg" alt="Drinks">
-                    <p>Drinks</p>
-                </li>
-                <li onclick="openCardapio(6)">
-                    <img src="midias/jpg/cardapio/bebidas.jpg" alt="Bebidas">
-                    <p>Bebidas</p>
-                </li>
+                <li><a href="tel:+5522992119010">(22) 99211-9010</a></li>
+                <li><a href="tel:+5522997944748">(22) 99794-4748</a></li>
             </ul>
-            <div class="cardapio_itens">
-                <ul id="page" class="visible">
-                    <li>
-                        <h2>Carnes</h2>
-                    </li>
-                    <li>
-                        <p class="titulo">Picanha na Chapa:</p>
-                        <p class="descricao">(Picanha bovina, fritas, arroz, farofa e m. a campanha)</p>
-                    </li>
-                    <li>
-                        <p class="titulo">Contra Filé à Gaúcha:</p>
-                        <p class="descricao">(C. filé, calabresa, fritas, arroz, farofa e m. a campanha)</p>
-                    </li>
-                    <li>
-                        <p class="titulo">Lombo Suíno à Cravo e Canela:</p>
-                        <p class="descricao">(Lombo suíno, fritas, arroz e farofa)</p>
-                    </li>
-                    <li>
-                        <p class="titulo">Strogonoff de Filé:</p>
-                        <p class="descricao">(C. filé, creme de leite, champignon, fritas e arroz)</p>
-                    </li>
-                    <li>
-                        <p class="titulo">Churrasco Misto:</p>
-                        <p class="descricao">(C. filé, lombo suíno ou carré, frango, calabresa, fritas, arroz, farofa e m. a campanha)</p>
-                    </li>
-                </ul>
-                <ul id="page" class="invisible">
-                    <li>
-                        <h2>Frango</h2>
-                    </li>
-                    <li>
-                        <p class="titulo">Frango à Brasileira:</p>
-                        <p class="descricao">(Frango grelhado, fritas, arroz e farofa)</p>
-                    </li>
-                    <li>
-                        <p class="titulo">Strogonoff de Frango:</p>
-                        <p class="descricao">(Frango, creme de leite, champignon, fritas e arroz)</p>
-                    </li>
-                </ul>
-                <ul id="page" class="invisible">
-                    <li>
-                        <h2>Peixe</h2>
-                    </li>
-                    <li>
-                        <p class="titulo">Filé de Peixe ao Molho de Camarão:</p>
-                        <p class="descricao">(Peixe frito, purê de batata, arroz e molho de camarão)</p>
-                    </li>
-                </ul>
-                <ul id="page" class="invisible">
-                    <li>
-                        <h2>Matinais</h2>
-                    </li>
-                    <li>
-                        <p class="titulo">Café Completo:</p>
-                        <p class="descricao">(Café, leite, frutas, torradas, suco, queijo, presunto, ovos, biscoitos e manteiga)</p>
-                    </li>
-                </ul>
-                <ul id="page" class="invisible">
-                    <li>
-                        <h2>Porções</h2>
-                        <p class="titulo">Nuggets com molho rosé</p>
-                        <p class="titulo">Arroz</p>
-                        <p class="titulo">Salaminho</p>
-                        <p class="titulo">Azeitonas</p>
-                        <p class="titulo">Aipim frito</p>
-                        <p class="titulo">Batata frita</p>
-                        <p class="titulo">Camarão ao alho e óleo</p>
-                        <p class="titulo">Carne seca com aipim ou com fritas</p>
-                        <p class="titulo">Isca de peixe</p>
-                        <p class="titulo">Linguiça calabresa</p>
-                        <p class="titulo">Frango a passarinho</p>
-                        <p class="titulo">Filé aperitivo</p>
-                    </li>
-                </ul>
-                <ul id="page" class="invisible">
-                    <li>
-                        <h2>Drinks</h2>
-                        <p class="titulo">Coquetel Cravo e Canela</p>
-                        <p class="titulo">Caifrutas (sabores diversos)</p>
-                        <p class="titulo">Caipirinha</p>
-                        <p class="titulo">Caipivodka</p>
-                    </li>
-                </ul>
-                <ul id="page" class="invisible">
-                    <li>
-                        <h2>Bebidas</h2>
-                        <p class="titulo">Vinho</p>
-                        <p class="titulo">Whisky</p>
-                        <p class="titulo">Champanhe</p>
-                        <p class="titulo">Vodka</p>
-                        <p class="titulo">Tequila</p>
-                        <p class="titulo">Cerveja</p>
-                        <p class="titulo">Refrigerante</p>
-                    </li>
-                </ul>
-            </div>
         </div>
-        <div class="casal">
-            <img src="midias/jpg/destaques/casal.jpg" alt="Casal se beijando">
-            <p>Venha e curta momentos inesquecíveis!</p>
-        </div>
-        <div id="contato" class="contato">
-            <div class="contato_container">
-                <ul>
-                    <li><h3>Redes Sociais</h3></li>
-                    <li>
-                        <img onclick="window.open('https://pt-br.facebook.com/motelcravoecanela/')" src="midias/png/facebook.png" alt="Facebook">
-                        <img onclick="window.open('https://www.instagram.com/motel_cravo_e_canela/')" src="midias/png/instagram.png" alt="Instagram">
-                        <img onclick="window.open('https://wa.me/5522992119010')" src="midias/png/whatsapp.png" alt="whatsapp">
-                    </li>
-                </ul>
-                <ul>
-                    <li><h3>Reservas</h3></li>
-                    <li><img onclick="window.open('https://wa.me/5522992119010')" src="midias/png/whatsapp.png" alt="whatsapp"></li>
-                </ul>
-                <ul>
-                    <li><h3>Localização</h3></li>
-                    <li><img onclick="window.open('https://www.google.com/maps/place/Motel+Cravo+e+Canela/@-22.8838803,-42.4407917,15z/data=!4m8!3m7!1s0x0:0xe4846fe3e1306dda!5m2!4m1!1i2!8m2!3d-22.8838803!4d-42.4407917')" src="midias/png/maps.png" alt="Google Maps Icon"></li>
-                </ul>
-                <ul>
-                    <li><h3>Telefones</h3></li>
-                    <li><a href="tel:+5522992119010">(22) 99211-9010</a></li>
-                    <li><a href="tel:+5522997944748">(22) 99794-4748</a></li>
-                </ul>
-            </div>
-            <h3 class="rodape">Rod. Amaral Peixoto, Km 73, S/Nº, Bonsucesso(Bacaxá), Saquarema, RJ</h3>
-        </div>
-        <div class="viewer_box_inactive">
-            <picture>
-                <p class="alert">Fotos meramente ilustrativas! As suítes possuem características distintas e passam por mudanças na decoração e reformas constantemente, o que pode causar variações nos itens, acessórios, móveis e etc...</p>
-                <img id="viewer_item" src="" alt="">
-                <button id="left" onclick="replaceImage(-1)">
-                    <i class='bx bxs-chevron-left'></i>
-                </button>
-                <button id="right" onclick="replaceImage(1)">
-                    <i class='bx bxs-chevron-right'></i>
-                </button>
-                <button id="close" onclick="closeFoto()">
-                    <i class='bx bx-x'></i>
-                </button>
-            </picture>
-        </div>
-    </div>
-    <script src="script/script.js"></script>
+        <p>© 2022 Copyright: Motel Cravo e Canela</p>
+    </footer>
+
 </body>
+<script src="./script/script.js"></script>
+
 </html>

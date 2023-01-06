@@ -5,3 +5,10 @@
 //     font-family: $a;
 //     font-size: $b;
 // }
+@mixin construct-pseudo($width, $height, $back-color) {
+    content: '';    
+    width: $width;
+    height: $height;
+    display: block;
+    background-color: $back-color;
+}
