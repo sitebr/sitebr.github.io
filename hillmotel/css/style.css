@@ -581,17 +581,17 @@ body.desktop footer .box .links li h3 {
   text-align: center;
   margin: 6px 0px;
 }
-body.desktop footer .box .contato {
+body.desktop footer .box .contatos {
   padding: 0px 40px;
 }
-body.desktop footer .box .contato li {
+body.desktop footer .box .contatos li {
   margin: 6px 0px;
 }
-body.desktop footer .box .contato li h3 {
+body.desktop footer .box .contatos li h3 {
   text-align: center;
   margin: 6px 0px;
 }
-body.desktop footer .box .contato li a {
+body.desktop footer .box .contatos li a {
   text-decoration: none;
   color: white;
 }
