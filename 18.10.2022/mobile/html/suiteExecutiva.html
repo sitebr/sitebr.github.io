@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VL3HNPB829"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-VL3HNPB829');
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>Suíte Executiva</title>
+</head>
+<body class="executiva">
+    <picture style="--src: url(../midias/jpg/galeria/executiva/2.jpg); --imgPosition: bottom;">
+        <h2>Suíte Executiva</h2>
+    </picture>
+    <div class="valores">
+        <h3>Valores e períodos:</h3>
+        <ul>
+            <li>• 02 horas = R$ 183,00</li>
+            <li>• 04 horas = R$ 284,00</li>
+            <li>• 06 horas = R$ 384,00</li>
+            <li>• 08 horas = R$ 485,00</li>
+            <li>• 12 horas = R$ 585,00</li>
+        </ul>
+    </div>
+    <div class="descricao">
+        <h3>Descrição:</h3>
+        <p> A Suíte Executiva é uma suíte que disponibiliza TV 32", som individual*, ar condicionado, frigobar e banheira de hidromassagem grande (redonda ou retangular). Essa suíte também possui espelho no teto, espelhos ao redor da suíte, móveis sado*, poltrona erótica*, sauna seca, cama redonda, uma bela decoração e garagem privativa. *Verificar disponibilidade dos itens!</p>
+    </div>
+    <div class="galeria" style="--columns: repeat(4, 24%);">
+        <h3>Galeria de fotos:</h3>
+        <div>
+            <img class="fotos" onclick="openFoto(0, 19)" src="../midias/jpg/galeria/executiva/1.jpg" alt="Suíte Executiva">
+            <img class="fotos" onclick="openFoto(1, 19)" src="../midias/jpg/galeria/executiva/2.jpg" alt="Suíte Executiva">
+            <img class="fotos" onclick="openFoto(2, 19)" src="../midias/jpg/galeria/executiva/3.jpg" alt="Suíte Executiva">
+            <img class="fotos" onclick="openFoto(3, 19)" src="../midias/jpg/galeria/executiva/4.jpg" alt="Suíte Executiva">
+            <img class="fotos" onclick="openFoto(4, 19)" src="../midias/jpg/galeria/executiva/5.jpg" alt="Suíte Executiva">
+            <img class="fotos" onclick="openFoto(5, 19)" src="../midias/jpg/galeria/executiva/6.jpg" alt="Suíte Executiva">
+            <img class="fotos" onclick="openFoto(6, 19)" src="../midias/jpg/galeria/executiva/7.jpg" alt="Suíte Executiva">
+            <img class="fotos" onclick="openFoto(7, 19)" src="../midias/jpg/galeria/executiva/8.jpg" alt="Suíte Executiva">
+            <img class="fotos" onclick="openFoto(8, 19)" src="../midias/jpg/galeria/executiva/9.jpg" alt="Suíte Executiva">
+            <img class="fotos" onclick="openFoto(9, 19)" src="../midias/jpg/galeria/executiva/10.jpg" alt="Suíte Executiva">
+            <img class="fotos" onclick="openFoto(10, 19)" src="../midias/jpg/galeria/executiva/11.jpg" alt="Suíte Executiva">
+            <img class="fotos" onclick="openFoto(11, 19)" src="../midias/jpg/galeria/executiva/12.jpg" alt="Suíte Executiva">
+            <img class="fotos" onclick="openFoto(12, 19)" src="../midias/jpg/galeria/executiva/13.jpg" alt="Suíte Executiva">
+            <img class="fotos" onclick="openFoto(13, 19)" src="../midias/jpg/galeria/executiva/14.jpg" alt="Suíte Executiva">
+            <img class="fotos" onclick="openFoto(14, 19)" src="../midias/jpg/galeria/executiva/15.jpg" alt="Suíte Executiva">
+            <img class="fotos" onclick="openFoto(15, 19)" src="../midias/jpg/galeria/executiva/16.jpg" alt="Suíte Executiva">
+            <img class="fotos" onclick="openFoto(16, 19)" src="../midias/jpg/galeria/executiva/17.jpg" alt="Suíte Executiva">
+            <img class="fotos" onclick="openFoto(17, 19)" src="../midias/jpg/galeria/executiva/18.jpg" alt="Suíte Executiva">
+            <img class="fotos" onclick="openFoto(18, 19)" src="../midias/jpg/galeria/executiva/19.jpg" alt="Suíte Executiva">
+            <img class="fotos" onclick="openFoto(19, 19)" src="../midias/jpg/galeria/executiva/20.jpg" alt="Suíte Executiva">
+        </div>
+    </div>
+    <div id="viewFull" style="display: none;">
+        <p class="alert">Fotos meramente ilustrativas! As suítes possuem características distintas e passam por mudanças na decoração e reformas constantemente, o que pode causar variações nos itens, acessórios, móveis e etc...</p>
+        <img id="image" src="" alt="">
+        <button id="prev" onclick="prev()"><i class='bx bx-chevrons-left' ></i></button>
+        <button id="next" onclick="next()"><i class='bx bx-chevrons-left bx-rotate-180' ></i></button>
+        <button id="close" onclick="close_()"><i class='bx bx-x'></i></button>
+    </div>
+</body>
+<script src="../script/script.js"></script>
+</html>

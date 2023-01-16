@@ -1,0 +1,115 @@
+@media screen and (min-width: 601px) {
+    .cardapio {
+    width: 100%;
+    max-width: 1366px;
+    margin: auto;
+    background-color: #000e40;
+    font-family: lobster;
+    padding: 1px 0px;
+    h3 {
+        background-color: white;
+        color: #000e40;
+        font-size: 30px;
+        text-align: center;    
+        margin-top: 20px;
+    }
+    .carnes, .frango, .peixe, .porcoes {
+        display: flex;
+        align-items: center;
+        padding: 20px 40px;
+        box-shadow: 0px 4px 10px black;
+        img {
+            width: calc(100% - 606px);
+            min-width: 200px;
+            height: 375px;
+            border-radius: 6px;
+            object-fit: cover;
+        }
+        .pratos {
+            width: 606px;
+            height: 375px;
+            padding: 0px 20px;
+            overflow: hidden;
+            p {
+                width: 606px;
+                margin-bottom: 10px;
+                color: white;
+                font-size: 24px;
+                font-family: oswald;
+                letter-spacing: 0.5px;
+                font-weight: bold;
+                border-bottom: 1px solid white;
+                span {
+                    color: white;
+                    font-size: 16px;
+                    font-weight: normal;
+                    display: block;
+                    padding-bottom: 4px;
+                }
+            }
+        }
+    }
+    .frango, .peixe {
+        img {
+            height: 200px;
+        }
+        .pratos {
+            height: fit-content;
+        }
+    }
+    .porcoes {
+        img {
+            height: 324px;
+        }
+        .pratos {
+            height: 324px;
+            p {
+                font-size: 16px;
+                margin-bottom: 2px;
+                font-weight: normal;
+            }
+        }
+    }
+    }
+}
+@media screen and (max-width: 601px) {
+    .cardapio {
+        width: 100%;
+        background-color: #000e40;
+        padding: 1px 0px 20px 0px;
+        h3 {
+            width: 100%;
+            background-color: white;
+            font-size: 26px;
+            font-family: lobster;
+            color: #000e40;
+            text-align: center;
+            margin: 20px 0px 0px 0px;
+        }
+        .carnes, .frango, .peixe, .porcoes {
+            border: 8px solid white;
+            img {
+                width: 100%;
+                height: 150px;
+                object-fit: cover;
+                box-shadow: 0px 0px 10px white;
+            }
+            .pratos {
+                background-color: black;
+                p {
+                    color: white;
+                    font-size: 20px;
+                    font-family: oswald;
+                    border-bottom: 1px solid white;
+                    text-indent: 10px;
+                    padding-bottom: 10px;
+                }
+                span {
+                    color: white;
+                    font-size: 16px;
+                    display: block;
+                }
+            }
+        }
+    }
+}
