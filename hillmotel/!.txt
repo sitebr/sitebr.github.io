@@ -1,0 +1,10 @@
+preciso criar tema, dark light // criado
+
+nomear topo do site //ok
+	fica por cima das fotos //ok
+transformar CONFIRA PREÇOS com JS
+	colocar h2 titulo em fotos e preços //ok
+	asterisco, conferir.
+redimensionar tudo //ok
+
+22/12/2022 - criar uma função que ao clicar no botão change theme, inicia um setInterval para modificar todos os iframes para dark theme
