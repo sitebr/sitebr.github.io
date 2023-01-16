@@ -1,0 +1,14 @@
+// @mixin resetList($a,$b) {
+//     padding: 0px;    
+//     margin: 0px;
+//     box-sizing: border-box;
+//     font-family: $a;
+//     font-size: $b;
+// }
+@mixin construct-pseudo($width, $height, $back-color) {
+    content: '';    
+    width: $width;
+    height: $height;
+    display: block;
+    background-color: $back-color;
+}

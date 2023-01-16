@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <script src="./script/cabecalho.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Contato</title>
+</head>
+
+<body class="light">
+    <div class="contato">
+        <section>
+            <ul>
+                <li onclick="window.open('https://wa.me/5522992119010', '_blank')">
+                    <img src="./midias/png/whatsapp.png" alt="">
+                    <div>
+                        <p class="title">Whatsapp</p>
+                        <p class="description">Reservas, pacotes, informações, ornamentações, dúvidas e etc...</p>
+                    </div>
+                </li>
+                <li onclick="window.open('https://pt-br.facebook.com/motelcravoecanela/', '_blank')">
+                    <img src="./midias/png/facebook.png" alt="">
+                    <div>
+                        <p class="title">Facebook</p>
+                        <p class="description">Acompanhe nossas postagens, tem sempre uma novidade!</p>
+                    </div>
+                </li>
+                <li onclick="window.open('https://www.instagram.com/motel_cravo_e_canela/', '_blank')">
+                    <img src="./midias/png/instagram.png" alt="">
+                    <div>
+                        <p class="title">Instagram</p>
+                        <p class="description">Sempre compartilhamos fotos de ornamentações!</p>
+                    </div>
+                </li>
+                <li onclick="window.open('https://www.google.com/maps/place/Motel+Cravo+e+Canela/@-22.8838803,-42.4407917,15z/data=!4m8!3m7!1s0x0:0xe4846fe3e1306dda!5m2!4m1!1i2!8m2!3d-22.8838803!4d-42.4407917','_blank')">
+                    <img src="./midias/png/maps.png" alt="">
+                    <div>
+                        <p class="title">Google Maps</p>
+                        <p class="description">Clique e trace sua rota até nossa localização!</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="./midias/jpg/contato.jpg" alt="">
+                    <div>
+                        <p class="title">Telefones</p>
+                        <p class="description">Clique aqui para nos ligar: <a href="tel:+5522992119010">Claro</a> ou <a href="tel:+5522997944748">Vivo</a>.</p>
+                    </div>
+                </li>
+                <li
+                    onclick="window.open('mailto:hillmotel@hotmail.com?subject=[***APAGUE E ESCREVA SEU NOME AQUI!***]&body=[***APAGUE E CONTE-NOS ALGO SOBRE VOCÊ, AH E NÃO ESQUEÇA DE ANEXAR SEU CURRÍCULO!***]')">
+                    <img src="./midias/png/curriculo1.png" alt="">
+                    <div>
+                        <p class="title">Trabalhe Conosco</p>
+                        <p class="description">Clique aqui para nos enviar seu currículo!</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </div>
+</body>
+<script>
+    function visible() {
+        let element = document.querySelector('.contato')
+        element.classList.add('visible')
+    }
+    document.body.onload = visible
+</script>
+
+</html>
