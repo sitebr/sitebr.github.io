@@ -33,16 +33,22 @@ function mount(n1, n2, folderName) {
 
 if (document.location.href.match('suite-simples.html')) {
     mount(0, 4, 'luxoSimples')
+    animationSuites()
 } else if (document.location.href.match('suite-stander.html')) {
     mount(1, 8, 'luxoStander')
+    animationSuites()
 } else if (document.location.href.match('suite-glamour.html')) {
     mount(2, 16, 'glamour')
+    animationSuites()
 } else if (document.location.href.match('suite-executiva.html')) {
     mount(3, 20, 'executiva')
+    animationSuites()
 } else if (document.location.href.match('suite-romana.html')) {
     mount(4, 20, 'presRom')
+    animationSuites()
 } else if (document.location.href.match('suite-plus.html')) {
     mount(5, 24, 'presPlus')
+    animationSuites()
 }
 
 window.closeViewer = function () {
@@ -101,4 +107,11 @@ window.rightImage = function (n) {
 
     let btnRight = document.querySelector(".btn-right")
     btnRight.setAttribute("onclick", `rightImage(${n})`)
+}
+
+function animationSuites() {
+    document.body.onload = function() {
+        let element = document.querySelector('.all-suites')
+        element.classList.add('visible')
+    }
 }

@@ -1224,6 +1224,11 @@ body.desktop {
         height: auto;
         background-color: rgba(white, .5);
         font-family: var(--font7);
+        opacity: 0;
+        &.visible {
+            opacity: 1;
+            transition: opacity 1s;
+        }
         section {
             display: flex;
             flex-direction: column;
