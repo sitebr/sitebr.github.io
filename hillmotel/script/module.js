@@ -1,6 +1,7 @@
 import { valores, suiteItens } from "./module-list.js"
 
 window.fotos = []
+window.thumbs = []
 
 function mount(n1, n2, folderName) {
     let pricesElement = document.querySelector('.prices')
@@ -19,14 +20,21 @@ function mount(n1, n2, folderName) {
         `
     }
 
+    if (n1 == 2 || n1 == 3) {
+        flexElement.innerHTML += `
+            <p style="color: red;">* Verificar disponibilidade!</p>
+        `
+    }
+
     for (let i = 1; i <= n2; i++) {
         fotos.push(`./midias/jpg/galeria/${folderName}/${i}.jpg`)
+        thumbs.push(`./midias/jpg/galeria/${folderName}/thumb/${i}.jpg`)
     }
 
     let galeriaElement = document.querySelector('.imagens')
     for (let i = 0; i < n2; i++) {
         galeriaElement.innerHTML += `
-            <img onclick="openViewer(${i})" src="${fotos[i]}">
+            <img onclick="openViewer(${i})" src="${thumbs[i]}">
         `
     }
 }
