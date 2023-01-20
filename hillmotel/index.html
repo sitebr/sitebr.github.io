@@ -16,11 +16,11 @@
 </head>
 
 <script>
-    if (window.outerWidth <= 800 ) {
+    if (window.innerWidth <= 800 ) {
     location.href = 'mobile.html'
     }
     setInterval(function(){
-        if (window.outerWidth <= 800 ) {
+        if (window.innerWidth <= 800 ) {
         location.href = 'mobile.html'
         }
     }, 1000)
@@ -41,7 +41,6 @@
                         <img onclick="window.open('https://wa.me/5522992119010')" src="./midias/png/whatsapp.png" alt="whatsapp">
                         <img onclick="window.open('https://pt-br.facebook.com/motelcravoecanela/')" src="./midias/png/facebook.png" alt="facebook">
                         <img onclick="window.open('https://www.instagram.com/motel_cravo_e_canela/')" src="./midias/png/instagram.png" alt="instagram">
-                        <!-- <img src="./midias/png/maps.png" alt="maps"> -->
                     </li>
                 </ul>
             </nav>
@@ -59,63 +58,6 @@
         <div class="center">
             <h2>Confira o preço de nossas suítes</h2>
             <div class="box-prices">
-                <div class="card">
-                    <p><i class='bx bxs-star'></i><i class='bx bxs-star'></i></p>
-                    <p><i class='bx bxs-bed'></i></p>
-                    <p class="nome-suite">Luxo Simples</p>
-                    <p class="valor">R$ <span>91,</span>00</p>
-                    <p class="periodo">2hrs</p>
-                    <button onclick="activeViewer('Suíte Luxo Simples', 'luxoSimples', 4)">fotos</button>
-                    <button onclick="activePrice(0)">preços e descrição</button>
-                </div>
-                <div class="card">
-                    <p><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half'></i></p>
-                    <p><i class='bx bxs-bed'></i></p>
-                    <p class="nome-suite">Luxo Stander</p>
-                    <p class="valor">R$ <span>102,</span>00</p>
-                    <p class="periodo">2hrs</p>
-                    <button onclick="activeViewer('Suíte Luxo Stander', 'luxoStander', 8)">fotos</button>
-                    <button onclick="activePrice(1)">preços e descrição</button>
-                </div>
-                <div class="card">
-                    <p><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></p>
-                    <p><i class='bx bxs-bed'></i></p>
-                    <p class="nome-suite">Glamour</p>
-                    <p class="valor">R$ <span>132,</span>00</p>
-                    <p class="periodo">2hrs</p>
-                    <button onclick="activeViewer('Suíte Glamour', 'glamour', 16)">fotos</button>
-                    <button onclick="activePrice(2)">preços e descrição</button>
-                </div>
-                <div class="card">
-                    <p><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i
-                            class='bx bxs-star'></i></p>
-                    <p><i class='bx bxs-bed'></i></p>
-                    <p class="nome-suite">Executiva</p>
-                    <p class="valor">R$ <span>183,</span>00</p>
-                    <p class="periodo">2hrs</p>
-                    <button onclick="activeViewer('Suíte Executiva', 'executiva', 20)">fotos</button>
-                    <button onclick="activePrice(3)">preços e descrição</button>
-                </div>
-                <div class="card">
-                    <p><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i
-                            class='bx bxs-star'></i><i class='bx bxs-star'></i></p>
-                    <p><i class='bx bxs-bed'></i></p>
-                    <p class="nome-suite">Pres. Romana</p>
-                    <p class="valor">R$ <span>250,</span>00</p>
-                    <p class="periodo">2hrs</p>
-                    <button onclick="activeViewer('Suíte Presidencial Romana', 'presRom', 20)">fotos</button>
-                    <button onclick="activePrice(4)">preços e descrição</button>
-                </div>
-                <div class="card">
-                    <p><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i
-                            class='bx bxs-star'></i><i class='bx bxs-star'></i></p>
-                    <p><i class='bx bxs-bed'></i></p>
-                    <p class="nome-suite">Pres. Plus</p>
-                    <p class="valor">R$ <span>288,</span>00</p>
-                    <p class="periodo">2hrs</p>
-                    <button onclick="activeViewer('Suíte Presidencial Plus', 'presPlus', 24)">fotos</button>
-                    <button onclick="activePrice(5)">preços e descrição</button>
-                </div>
             </div>
             <div class="viewer-off" id="viewer">
             </div>
@@ -125,50 +67,6 @@
         <div class="center">
             <h2>Vantagens do nosso Motel</h2>
             <div class="box">
-                <div class="card">
-                    <i class='bx bx-car'></i>
-                    <div class="description">
-                        <h3>Garagem privativa</h3>
-                        <p>Deixe seu carro seguro e entre nas nossas suítes com toda a discrição.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <i class='bx bx-time'></i>
-                    <div class="description">
-                        <h3>Aberto 24hrs</h3>
-                        <p>Curta seu momento sem se preocupar com o horário.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <i class='bx bx-wind'></i>
-                    <div class="description">
-                        <h3>Ar condicionado</h3>
-                        <p>O clima pode esquentar, mas na sua suíte vai estar sempre fresquinho.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <i class='bx bx-dish'></i>
-                    <div class="description">
-                        <h3>Cozinha</h3>
-                        <p>Nossa cozinha está preparada 24 horas por dia para atender aos nossos clientes.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <i class='bx bx-lock-alt'></i>
-                    <div class="description">
-                        <h3>Segurança</h3>
-                        <p>Além de conforto, você tem tranquilidade de curtir com total segurança nas nossas
-                            dependências.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <i class='bx bx-phone-call'></i>
-                    <div class="description">
-                        <h3>Melhor atendimento</h3>
-                        <p>Nossos funcionários têm presteza no atendimento e são treinados para atendê-lo com total
-                            descrição.</p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -265,5 +163,38 @@
 
 </body>
 <script src="./script/script.js"></script>
+<script type="module">
+    import { vantagens, suitePrice} from './script/module-list.js'
+    let mountPrices = function() {
+        let element = document.querySelector('.box-prices')
+        for (var i = 0; i < suitePrice.length; i++) {
+            element.innerHTML += `
+            <div class="card">
+                <p>${suitePrice[i][0]}</p>
+                <p><i class='bx bxs-bed'></i></p>
+                <p class="nome-suite">${suitePrice[i][1]}</p>
+                <p class="valor">R$ <span>${suitePrice[i][2]},</span>00</p>
+                <p class="periodo">2hrs</p>
+                <button onclick="activeViewer(${suitePrice[i][4]})">fotos</button>
+                <button onclick="activePrice(${i})">preços e descrição</button>
+            </div>
+            `
+        }
+    }()
+    let mountVantagens = function() {
+        let element = document.querySelector('.vantagens .center .box')
+        for (var i = 0; i < vantagens.length; i++) {
+            element.innerHTML += `
+            <div class="card">
+                <i class='bx ${vantagens[i][0]}'></i>
+                <div class="description">
+                    <h3>${vantagens[i][1]}</h3>
+                    <p>${vantagens[i][2]}</p>
+                </div>
+            </div>
+            `
+        }
+    }()
+</script>
 
 </html>

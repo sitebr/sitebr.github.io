@@ -32,50 +32,6 @@
             <h2>Vantagens do nosso Motel</h2>
             <div class="center">
                 <div class="box">
-                    <div class="card">
-                        <i class='bx bx-car'></i>
-                        <div class="description">
-                            <h3>Garagem privativa</h3>
-                            <p>Deixe seu carro seguro e entre nas nossas suítes com toda a discrição.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <i class='bx bx-time'></i>
-                        <div class="description">
-                            <h3>Aberto 24hrs</h3>
-                            <p>Curta seu momento sem se preocupar com o horário.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <i class='bx bx-wind'></i>
-                        <div class="description">
-                            <h3>Ar condicionado</h3>
-                            <p>O clima pode esquentar, mas na sua suíte vai estar sempre fresquinho.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <i class='bx bx-dish'></i>
-                        <div class="description">
-                            <h3>Cozinha</h3>
-                            <p>Nossa cozinha está preparada 24 horas por dia para atender aos nossos clientes.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <i class='bx bx-lock-alt'></i>
-                        <div class="description">
-                            <h3>Segurança</h3>
-                            <p>Além de conforto, você tem tranquilidade de curtir com total segurança nas nossas
-                                dependências.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <i class='bx bx-phone-call'></i>
-                        <div class="description">
-                            <h3>Melhor atendimento</h3>
-                            <p>Nossos funcionários têm presteza no atendimento e são treinados para atendê-lo com total
-                                descrição.</p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -102,9 +58,38 @@
         </section>
     </div>
 </body>
-<script src="./script/home.js"></script>
-<script>
-    document.body.onload = function() {
+<script type="module">
+    import { vantagens, suitePrice } from "./script/module-list.js"
+    let mountVantagens = function() {
+        let element = document.querySelector('.box')
+        for (var i = 0; i < vantagens.length; i++) {
+            element.innerHTML += `
+            <div class="card">
+                <i class='bx ${vantagens[i][0]}'></i>
+                <div class="description">
+                    <h3>${vantagens[i][1]}</h3>
+                    <p>${vantagens[i][2]}</p>
+                </div>
+            </div>
+            `
+        }
+    }()
+    let mountPrices = function() {
+        let boxPrices = document.querySelector('.box-prices')
+        for (var i = 0; i < suitePrice.length; i++) {
+            boxPrices.innerHTML += `
+            <div class="card">
+                <p>${suitePrice[i][0]}</p>
+                <p><i class='bx bxs-bed'></i></p>
+                <p class="nome-suite">${suitePrice[i][1]}</p>
+                <p class="valor">R$ <span>${suitePrice[i][2]},</span>00</p>
+                <p class="periodo">2hrs</p>
+                <p class="link" onclick="location.href = '${suitePrice[i][3]}'">Clique aqui para conhecer esta suíte!</p>
+            </div>
+            `
+        }
+    }()
+    document.body.onload = function () {
         let element = document.querySelector('.home')
         element.classList.add('visible')
     }

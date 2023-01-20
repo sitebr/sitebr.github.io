@@ -1,4 +1,4 @@
-import { valores, suiteItens } from "./module-list.js"
+import { valores, suiteItens, vantagens } from "./module-list.js"
 
 window.fotos = []
 window.thumbs = []
@@ -57,6 +57,8 @@ if (document.location.href.match('suite-simples.html')) {
 } else if (document.location.href.match('suite-plus.html')) {
     mount(5, 24, 'presPlus')
     animationSuites()
+} else if (document.location.href.match('home.html')) {
+    mountVantagens()
 }
 
 window.closeViewer = function () {
@@ -121,5 +123,20 @@ function animationSuites() {
     document.body.onload = function() {
         let element = document.querySelector('.all-suites')
         element.classList.add('visible')
+    }
+}
+
+function mountVantagens() {
+    let element = document.querySelector('.box')
+    for (var i = 0; i < vantagens.length; i++) {
+        element.innerHTML += `
+        <div class="card">
+            <i class='bx ${vantagens[i][0]}'></i>
+            <div class="description">
+                <h3>${vantagens[i][1]}</h3>
+                <p>${vantagens[i][2]}</p>
+            </div>
+        </div>
+        `
     }
 }

@@ -4,7 +4,6 @@ function theme() {
     icon.classList.toggle('bxs-moon')
     icon.classList.toggle('bxs-sun')
     body.classList.toggle('light-theme')
-    // body.classList.toggle('dark-theme')
 }
 
 let imgs = []
@@ -13,8 +12,7 @@ function activeViewer(suite, folder, n) {
     imgs = []
     let viewer = document.getElementById('viewer')
     viewer.classList.replace('viewer-off', 'viewer-on')
-    viewer.innerHTML = ``
-    viewer.innerHTML += `
+    viewer.innerHTML = `
     <div class="photo-box">
         <p class="titulo">${suite}</p>
         <div class="photo">
@@ -46,7 +44,7 @@ let suiteItens = [
     ['TV 32"', 'Som', 'Ar condicionado', 'Frigobar', 'Hidromassagem P', 'Garagem privativa'],
     ['TV 32"', 'Som individual*', 'Ar condicionado', 'Frigobar', 'Hidromassagem Grande', 'Espelho no teto', 'Garagem privativa'],
     ['TV 32"', 'Som individual', 'Ar condicionado', 'Frigobar', 'Hidromassagem Grande', 'Cama redonda', 'Espelho no teto', 'Móveis sado*', 'Poltrona erótica*', 'Sauna seca', 'Garagem privativa'],
-    ['TV 32"', 'Som individual', 'Ar condicionado', 'Frigobar no quarto', 'Frigobar na piscina', 'Hidromassagem Grande', 'Cama redonda', 'Espelho no teto', 'Decoração temática', 'Piscina', 'Poltrona erótica', 'Jogo de luzes', 'Cadeira do Sultão', 'Sauna a vapor', 'Garagem privativa'],
+    ['TV 32"', 'Som individual', 'Ar condicionado', 'Frigobar no quarto', 'Frigobar na piscina', 'Hidromassagem Grande', 'Cama redonda', 'Espelho no teto', 'Decoração temática', 'Piscina', 'Poltrona erótica', 'Jogo de luzes', 'Cadeira do Imperador', 'Sauna a vapor', 'Garagem privativa'],
     ['TV 32"', 'Som individual', 'Ar condicionado', 'Frigobar no quarto', 'Frigobar na piscina','Hidromassagem Grande', 'Cama redonda', 'Espelho no teto', 'Pole dance', 'Piscina', 'Jogo de luzes', 'Globo espelhado', 'Sauna a vapor', 'Garagem privativa'],
 ]
 
