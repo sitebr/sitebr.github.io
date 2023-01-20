@@ -699,16 +699,11 @@ body.desktop footer p {
 
 .home {
   background-color: var(--color-2, #2C3333);
-  animation-name: my-animation;
-  animation-duration: 0.5s;
+  transform: rotateY(90deg);
 }
-@keyframes my-animation {
-  0% {
-    transform: rotateY(90deg);
-  }
-  100% {
-    transform: rotateY(0deg);
-  }
+.home.animation {
+  transition: transform 0.5s;
+  transform: rotateY(0deg);
 }
 .home section.fotos-casais picture {
   width: 100%;

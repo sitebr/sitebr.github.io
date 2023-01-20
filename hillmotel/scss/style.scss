@@ -795,15 +795,10 @@ body.desktop {
 
 .home {
     background-color: var(--color-2, $dark-color1);
-    animation-name: my-animation;
-    animation-duration: .5s;
-    @keyframes my-animation {
-        0% {
-            transform: rotateY(90deg);
-        }
-        100% {
-            transform: rotateY(0deg);
-        }
+    transform: rotateY(90deg);
+    &.animation {
+        transition: transform .5s;
+        transform: rotateY(0deg);
     }
     section.fotos-casais {
         picture {
