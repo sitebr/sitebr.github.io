@@ -34,6 +34,7 @@
         height: 100vh;
         background-color: black;
         display: flex;
+        justify-content: center;
     }
     div {
         display: flex;
@@ -53,10 +54,10 @@
         box-shadow: 0px 0px 10px 4px red;
     }
     img {
-        width: 100vw;
+        width: 100%;
     }
     a {
-        width: 70vw;
+        width: 70%;
         text-align: center;
         font-family: gagalin;
         color: white;
@@ -67,6 +68,16 @@
         margin-bottom: 24px;
         text-decoration: underline;
         padding-bottom: 8px;
+    }
+    @media screen and (min-width: 600px) {
+        a {
+            font-size: 7vw;
+        }
+    }
+    @media screen and (min-width: 1278px) {
+        a {
+            font-size: 3vw;
+        }
     }
 </style>
 <body>
